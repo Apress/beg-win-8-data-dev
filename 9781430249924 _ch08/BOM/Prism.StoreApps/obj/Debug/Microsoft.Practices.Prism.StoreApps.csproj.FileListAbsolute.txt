@@ -1,0 +1,34 @@
+D:\SystemDowload\Prism\C#\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.xml
+D:\SystemDowload\Prism\C#\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll
+D:\SystemDowload\Prism\C#\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.pdb
+D:\SystemDowload\Prism\C#\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll.CodeAnalysisLog.xml
+D:\SystemDowload\Prism\C#\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll.lastcodeanalysissucceeded
+D:\SystemDowload\Prism\C#\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.pri
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\Microsoft.Practices.Prism.StoreApps.dll
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\Microsoft.Practices.Prism.StoreApps.pdb
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\priconfig.xml.intermediate
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\layout.resfiles.intermediate
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\resources.resfiles.intermediate
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\pri.resfiles.intermediate
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\priconfig.xml
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\layout.resfiles
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\resources.resfiles
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\pri.resfiles
+D:\SystemDowload\Prism\C#\Prism.StoreApps\obj\Debug\LanguageQualifiers.txt
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.pdb
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll.CodeAnalysisLog.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll.lastcodeanalysissucceeded
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.pri
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\Microsoft.Practices.Prism.StoreApps.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\Microsoft.Practices.Prism.StoreApps.pdb
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\priconfig.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\layout.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\resources.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\pri.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\priconfig.xml.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\layout.resfiles.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\resources.resfiles.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\pri.resfiles.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\obj\Debug\LanguageQualifiers.txt

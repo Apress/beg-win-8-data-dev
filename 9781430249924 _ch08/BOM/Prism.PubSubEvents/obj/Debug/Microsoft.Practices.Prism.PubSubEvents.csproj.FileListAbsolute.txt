@@ -1,0 +1,20 @@
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.xml
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.pdb
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll.CodeAnalysisLog.xml
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll.lastcodeanalysissucceeded
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.csprojResolveAssemblyReference.cache
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.Properties.Resources.resources
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.csproj.GenerateResource.Cache
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.dll
+D:\SystemDowload\Prism\C#\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.pdb
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.pdb
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll.CodeAnalysisLog.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll.lastcodeanalysissucceeded
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.Properties.Resources.resources
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.csproj.GenerateResource.Cache
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\obj\Debug\Microsoft.Practices.Prism.PubSubEvents.pdb

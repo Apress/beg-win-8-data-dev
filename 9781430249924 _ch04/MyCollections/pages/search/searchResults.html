@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="Search" />
+    <title>Search Contract</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/search/searchResults.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+</head>
+<body>
+    <!-- This template is used to display each item in the ListView declared
+         below. -->
+    <!--ItemTemplate to display search from Rotten Tomatoes database -->
+    <div 
+        id="onlineItemtemplate" 
+        class="itemtemplate" 
+        data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <img 
+                class="item-image" 
+                src="#" data-win-bind="src: image; alt: title" />
+            <div class="item-content">
+                <h3 
+                    class="item-title win-type-x-small win-type-ellipsis" 
+                    data-win-bind="innerHTML: title searchResults.title" />
+                <h4 
+                    class="item-subtitle win-type-x-small win-type-ellipsis" 
+                    data-win-bind="innerHTML: year searchResults.text" />
+            </div>
+        </div>
+    </div>
+    <!--ItemTemplate to display search from IndexedDB -->
+    <div id="dbItemtemplate"  
+        class="itemtemplate" 
+        data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <img 
+                class="item-image" 
+                src="#" data-win-bind="src: poster; alt: title" />
+            <div class="item-content">
+                <h3 
+                    class="item-title win-type-x-small win-type-ellipsis" 
+                    data-win-bind="innerHTML: title searchResults.title" />
+                <h4 
+                    class="item-subtitle win-type-x-small win-type-ellipsis" 
+                    data-win-bind="innerHTML: year searchResults.text" />
+                <h4 
+                    class="item-subtitle win-type-x-small win-type-ellipsis" 
+                    data-win-bind="innerHTML: status searchResults.text" />
+            </div>
+        </div>
+    </div>
+    
+     
+    <!-- The content that will be loaded and displayed. -->
+    <div class="searchResults fragment">
+        <!--Page Header-->
+        <header 
+            aria-label="Header content" 
+            role="banner">
+            <button 
+                class="win-backbutton" 
+                aria-label="Back" 
+                disabled 
+                type="button" />
+            <div class="titlearea">
+                <h1 class="pagetitle win-type-ellipsis" />
+                <h2 class="pagesubtitle win-type-ellipsis" />
+            </div>
+        </header>
+        <section 
+            aria-label="Main content" 
+            role="main">
+            <div 
+                class="resultsmessage win-type-x-large">
+                No results match your search.
+            </div>
+            <!--Filter section-->
+            <div class="filterarea">
+                <ul class="filterbar"></ul>
+                <select class="filterselect" />
+            </div>
+            <!--ListView-->
+            <div 
+                id="searchListView" 
+                class="resultslist win-selectionstylefilled" 
+                aria-label="Search results" 
+                data-win-control="WinJS.UI.ListView" />
+        </section>        
+    </div>
+</body>
+</html>

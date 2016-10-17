@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FAMILYPC</Machine>
+    <WindowsUser>vinodh</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>26C8270D53C865A3693A2E96ABDC6787FD70F2E190FF5116C602A0ED203F35DE</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>36c8627d-6238-4280-95fc-e57e2deb6ed9_1.0.0.0_neutral__4sxw0mv063akm</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>36c8627d-6238-4280-95fc-e57e2deb6ed9_4sxw0mv063akm!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>36c8627d-6238-4280-95fc-e57e2deb6ed9</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=vinodh</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-05-30T05:17:21.741</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\PasswordManager.exe">
+      <PackagePath>PasswordManager.exe</PackagePath>
+      <Modified>2013-05-30T05:17:21.137</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\PasswordManager.pdb">
+      <PackagePath>PasswordManager.pdb</PackagePath>
+      <Modified>2013-05-30T05:17:21.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\Lib\Esent.Interop.Metro.dll">
+      <PackagePath>Esent.Interop.Metro.dll</PackagePath>
+      <Modified>2013-01-09T05:59:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\packages\WinRT.DB.0.7.0\lib\winrt45\WinRTDatabase.dll">
+      <PackagePath>WinRTDatabase.dll</PackagePath>
+      <Modified>2013-01-12T11:35:37.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2013-01-10T03:02:49.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-01-11T03:51:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-01-12T16:53:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-01-12T16:55:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\PasswordDetail.xaml">
+      <PackagePath>PasswordDetail.xaml</PackagePath>
+      <Modified>2013-01-16T07:02:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch05\PasswordManagement\PasswordManagement\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-01-12T11:53:20.000</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

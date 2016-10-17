@@ -1,0 +1,162 @@
+﻿<Infrastructure:VisualStateAwarePage
+    x:Name="pageRoot"
+    x:Class="BOM.Views.ProductsPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BOM.Views"
+    xmlns:Infrastructure="using:Microsoft.Practices.Prism.StoreApps"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Infrastructure:ViewModelLocator.AutoWireViewModel="true"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Bill of Material</x:String>
+        <DataTemplate x:Key="BOMDataTemplate">
+        	<StackPanel>
+        		<TextBlock TextWrapping="Wrap" Text="{Binding BOMItem.ItemName}" FontSize="16" Foreground="#FFFDFDFD"/>
+        		<StackPanel Orientation="Horizontal">
+        			<TextBlock TextWrapping="Wrap" Text="Avaliable Stock: " Height="20" Foreground="#FFEC7524"/>
+        			<Border Height="20" Background="#FFF92020" Margin="10,0" Padding="3,0">
+        				<TextBlock TextWrapping="Wrap" Text="{Binding BOMItem.StockCount}" Margin="3,0" Foreground="White" FontWeight="Bold"/>
+        			</Border>
+        			<TextBlock TextWrapping="Wrap" Text=" Required Item: " Height="20" Foreground="#FFEC7524"/>
+        			<Border Height="20" Background="#FF31A2F0" Margin="10,0,3,0" Padding="3,0">
+        				<TextBlock TextWrapping="Wrap" Text="{Binding Quantity}" Margin="3,0" Foreground="White" FontWeight="Bold"/>
+        			</Border>
+        		</StackPanel>
+        	</StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="MaterialDataTemplate">
+
+        	<StackPanel Margin="0,0,0,25">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Orientation="Horizontal">
+					 <TextBlock TextWrapping="Wrap" Text="{Binding MaterialName}" Height="30" FontSize="21.333" HorizontalAlignment="Left"/>
+							 </StackPanel>
+				<StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+					<Button Content="Add Item" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
+				</StackPanel>
+			</Grid>
+        		
+        		<ListBox ItemsSource="{Binding BOMMaterials}" ItemTemplate="{StaticResource BOMDataTemplate}" Background="#FF353C41"/>
+				 
+        	</StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="ItemDataTemplate">
+        	<StackPanel Margin="0,0,0,15">
+        		<TextBlock TextWrapping="Wrap" Text="{Binding ItemName}" FontSize="21.333" Margin="0,0,0,5"/>
+        		<StackPanel Orientation="Horizontal">
+        			<TextBlock TextWrapping="Wrap" Text="Avaliable Stock: " Height="20" Foreground="#FFEC7524"/>
+        			<Border Height="20" Background="#FFF92020" Margin="10,0" Padding="3,0">
+        				<TextBlock TextWrapping="Wrap" Text="{Binding StockCount}" Margin="3,0" Foreground="White"/>
+        			</Border>        			 
+        		</StackPanel>
+        	</StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+	<Infrastructure:VisualStateAwarePage.BottomAppBar>
+		<AppBar>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Orientation="Horizontal">
+					  <Button x:Name="AddMaterial"                           
+                           Command="{Binding AddMaterialCommand, Mode=OneWay}" Style="{StaticResource AddMaterialAppBarButtonStyle}"
+                             />
+							 </StackPanel>
+				<StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+					<Button x:Name="AddItem"                           
+						Command="{Binding AddItemCommand, Mode=OneWay}" Style="{StaticResource AddItemAppBarButtonStyle}"
+                             />
+				</StackPanel>
+			</Grid>
+		</AppBar>
+	</Infrastructure:VisualStateAwarePage.BottomAppBar>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF2C3339">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="769*"/>
+    		<ColumnDefinition Width="597*"/>
+    	</Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="145*"/>
+        </Grid.RowDefinitions>
+		 <Popup x:Name="AddMaterialPopup"
+               x:Uid="AddMaterialPopup"
+               AutomationProperties.AutomationId="AddMaterialPopup"
+               IsLightDismissEnabled="True"
+               IsOpen="{Binding IsAddMaterialPopupOpened, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="20,20,0,0">
+           <Border Height="Auto" Width="Auto" Margin="0" BorderBrush="#FF2C3339" BorderThickness="1" Background="#FF080707">
+		 		<Grid Background="#FF080808" x:Name="gdChild" Height="150" Width="273" Margin="5">
+		 			<Grid.RowDefinitions>
+		 				<RowDefinition Height="Auto" />
+		 				<RowDefinition Height="Auto" />
+		 				<RowDefinition Height="38"/>
+		 			</Grid.RowDefinitions>
+		 			<Grid.ColumnDefinitions>
+		 				<ColumnDefinition Width="Auto" />
+		 				<ColumnDefinition Width="*" />
+		 			</Grid.ColumnDefinitions>
+		 			<TextBlock Margin="10" Grid.Column="0" Grid.Row="0" Text="Material" Grid.ColumnSpan="2" Style="{StaticResource HeaderTextStyle}" FontSize="21.333" />
+		 			<TextBlock Margin="10,0,8,0" Grid.Column="0" Grid.Row="1" Text="Material Name" Style="{StaticResource ResourceKey=SubheaderTextStyle}" FontSize="13.333" />
+		 			<TextBox Margin="10" Grid.Column="1" Grid.Row="1" x:Name="txtMaterialName" />
+		 			<Button x:Name="saveMaterial"  x:Uid="LoginPopupLogin" Content="Save"  Margin="0,0,20,0" Grid.Row="2" Grid.Column="1" Height="35" HorizontalAlignment="Right"  />
+		 		</Grid>
+
+		 	</Border>
+
+        </Popup>
+        <!-- Back button and page title -->
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding HeaderLabel}" Style="{StaticResource PageHeaderTextStyle}" Margin="30,0,30,40"/>
+        </Grid>
+        <ListView Grid.Row="2" ItemsSource="{Binding Materials}" ItemTemplate="{StaticResource MaterialDataTemplate}" Margin="30,0,0,0"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Materials" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Items" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,2" Grid.Column="1"/>
+        <ListView Grid.Row="2" ItemsSource="{Binding Items}" ItemTemplate="{StaticResource ItemDataTemplate}" Grid.Column="1" Margin="30,0,0,0"/>
+		
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="Filled"/>
+
+                <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
+                <VisualState x:Name="FullScreenPortrait"/>
+
+                <!-- The back button and title have different styles when snapped -->
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+    </Infrastructure:VisualStateAwarePage>
+

@@ -1,0 +1,7 @@
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\bin\BOM.Service.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\bin\BOM.Service.pdb
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\obj\Debug\BOM.Service.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\obj\Debug\BOM.Service.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\obj\Debug\BOM.Service.pdb
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\bin\EntityFramework.dll
+D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM.Service\bin\EntityFramework.xml

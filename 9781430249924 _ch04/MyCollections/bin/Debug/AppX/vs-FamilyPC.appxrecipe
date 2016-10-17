@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FAMILYPC</Machine>
+    <WindowsUser>vinodh</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>F8EA46A1150B10728D1B2F249CB3229657912026873B08F5E10E7C86BF82B0F2</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>f08a8e1e-ae0b-41fa-b926-ca6d8fe69886_1.0.0.0_neutral__4sxw0mv063akm</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>f08a8e1e-ae0b-41fa-b926-ca6d8fe69886_4sxw0mv063akm!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>f08a8e1e-ae0b-41fa-b926-ca6d8fe69886</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=vinodh</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-03-10T17:35:00.614</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-12-25T20:09:54.879</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\details\movieDetail.css">
+      <PackagePath>pages\details\movieDetail.css</PackagePath>
+      <Modified>2012-12-29T16:05:16.305</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\home\home.css">
+      <PackagePath>pages\home\home.css</PackagePath>
+      <Modified>2012-12-30T08:14:55.932</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\search\searchResults.css">
+      <PackagePath>pages\search\searchResults.css</PackagePath>
+      <Modified>2012-12-26T03:49:51.354</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-29T18:29:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-29T18:29:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-29T18:29:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-29T18:29:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2013-01-11T07:01:58.931</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\js\movie.js">
+      <PackagePath>js\movie.js</PackagePath>
+      <Modified>2013-01-11T07:02:39.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+      <Modified>2012-12-25T20:09:54.893</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\details\movieDetail.js">
+      <PackagePath>pages\details\movieDetail.js</PackagePath>
+      <Modified>2013-01-06T21:38:31.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\home\home.js">
+      <PackagePath>pages\home\home.js</PackagePath>
+      <Modified>2013-01-05T04:45:35.978</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\search\searchResults.js">
+      <PackagePath>pages\search\searchResults.js</PackagePath>
+      <Modified>2013-01-08T06:09:00.293</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\details\movieDetail.html">
+      <PackagePath>pages\details\movieDetail.html</PackagePath>
+      <Modified>2013-01-06T21:38:31.119</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\home\home.html">
+      <PackagePath>pages\home\home.html</PackagePath>
+      <Modified>2013-01-06T21:38:31.125</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-12-28T06:28:05.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\pages\search\searchResults.html">
+      <PackagePath>pages\search\searchResults.html</PackagePath>
+      <Modified>2013-01-06T21:38:31.100</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-12-28T06:29:46.648</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.9200.20512</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.9200.20512</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

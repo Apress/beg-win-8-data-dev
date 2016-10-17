@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FAMILYPC</Machine>
+    <WindowsUser>vinodh</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\BOM.exe">
+      <PackagePath>BOM.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\BOM.pdb">
+      <PackagePath>BOM.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.pdb">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll">
+      <PackagePath>Microsoft.Practices.Prism.PubSubEvents.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\packages\Unity.3.0.1304.0\lib\NetCore45\Microsoft.Practices.Unity.NetCore.dll">
+      <PackagePath>Microsoft.Practices.Unity.NetCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.pdb">
+      <PackagePath>Microsoft.Practices.Prism.PubSubEvents.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\Views\BillOfMaterialPage.xaml">
+      <PackagePath>Views\BillOfMaterialPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

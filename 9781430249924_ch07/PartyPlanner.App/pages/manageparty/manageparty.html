@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>manageparty</title>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="manageparty.css" rel="stylesheet" />
+    <script src="/scripts/jquery-1.8.3.js"></script>
+    <script src="manageparty.js"></script>
+</head>
+<body>
+    <!--Item Templates for ShoppingItem ListView-->
+    <div id="shoppingTemplate" data-win-control="WinJS.Binding.Template">      
+         <div class="item">         
+            <div class="item-content">                 
+                <h2 class="item-title win-type-x-small win-type-ellipsis" data-win-bind="innerHTML: ItemName"></h2>                 
+                <h4 class="item-subtitle-shoppingitem win-type-x-small win-type-ellipsis" data-win-bind="innerHTML: Quantity"></h4>            
+            </div>
+        </div>
+    </div>
+    <!--Item Templates for Guest ListView-->
+    <div id="guestTemplate" data-win-control="WinJS.Binding.Template">
+         <div class="item">         
+            <div class="item-content">                 
+                <h2 class="item-title win-type-x-small win-type-ellipsis" data-win-bind="innerHTML: FamilyName"></h2>                 
+                <h4 class="item-subtitle-guests win-type-x-small win-type-ellipsis" data-win-bind="innerHTML: NumberOfPeople"></h4>            
+            </div>
+        </div>
+    </div>
+
+    <div class="manageparty fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Add/Edit Party Details</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <!--Leftside - Party HTML Elements-->
+            <div id="divDetail" class="leftColumn">
+                <label for="partyName">Party Name</label>
+                <input type="text" id="partyName" name="partyName" data-win-bind="value: PartyName Binding.Mode.twoway"><br />
+
+                <label for="datetime">Date Time:</label>
+                <input type="text" id="datetime" name="datetime" data-win-bind="value: DateTime Binding.Mode.twoway"> <br />
+
+                <label for="completed">IsCompleted?</label>
+                <input type="checkbox"  id="completed" name="completed" class="boxes" data-win-bind="checked: Completed Binding.Mode.twoway" /><br />
+
+                <input type="button" name="saveParty" id="saveParty" value="Save Party Details" />
+
+            </div>
+            <!--Right Side-->
+            <div class="rightColumn">
+                <h2>Guest List</h2> 
+                <div class="item"> 
+                <label  class="labelMessage"  id="lblGuestMessage"/> </div>
+                <div id="guestListView" data-win-control="WinJS.UI.ListView" data-win-options="{itemTemplate:select('#guestTemplate')}">
+                </div>
+                <br />
+
+                <h2>Shopping List</h2>
+                 <div class="item"> <label class="labelMessage" id="lblItemMessage"/></div>
+                <div id="shoppingListView" data-win-control="WinJS.UI.ListView" data-win-options="{itemTemplate:select('#shoppingTemplate')}">                
+                </div>
+            </div>
+            <!--Shopping Flyout UI-->
+            <div id="shoppingItemFlyout" data-win-control="WinJS.UI.Flyout">
+                <p>
+                    <label for="Item">
+                        Name
+                        <br />
+                    </label>
+                    <input type="text" id="shopppingItem" />
+                </p>
+                <p>
+                    <label for="Item">
+                        Quantity
+                        <br />
+                    </label>
+
+                    <input type="text" id="quantity" />
+                </p>
+                <button id="addToShoppingList">
+                    Add</button>
+            </div>
+            <!--Guest Flyout UI-->
+            <div id="guestFlyout" data-win-control="WinJS.UI.Flyout">              
+                <p>
+                    <label for="guestName">
+                        Family Name
+                        <br />
+                    </label>
+                    <input type="text" id="guestName" />
+                </p>
+                <p>
+                    <label for="Item">
+                        No of Guest
+                        <br />
+                    </label>
+                    <input type="text" id="noofguest" />
+                </p>
+                <button id="addToGuestList">
+                    Add</button>
+            </div>
+        </section>
+    </div>
+
+    <!--App bar-->
+    <div data-win-control="WinJS.UI.AppBar" class="appBar" id="appBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'showGuest', label:'Add Guest', icon:'add',section:'global'}">
+        </button>
+
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'showShopping', label:'Add Item', icon:'add',section:'global'}">
+        </button>
+    </div>
+</body>
+</html>

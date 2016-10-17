@@ -1,0 +1,49 @@
+﻿<UserControl
+    x:Class="AviarySDKsWindows8.UI.Controls.AviaryStickerContainer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AviarySDKsWindows8.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+
+    d:DesignWidth="400"
+    RenderTransformOrigin="0.5,0.5"
+    RenderTransform="{Binding ContainerTransform}">
+    <UserControl.Resources>
+        <!--<ResourceDictionary Source="../../Themes/AviaryResources.xaml" />-->
+    </UserControl.Resources>
+    <Grid ManipulationMode="All"  x:Name="LayoutRoot" RenderTransformOrigin="0.5,0.5" Background="Transparent">
+
+        <Grid Margin="{Binding ContentMargin}" RenderTransformOrigin="0.5,0.5">
+            <ContentControl Content="{Binding Content}" />
+        </Grid>
+        <Grid x:Name="closeImage" Background="{Binding AviaryThemeColorBrush}"
+            Visibility="{Binding ManipulationHandlesVisibility}"
+            Height="{Binding IconHeight}"
+            ManipulationMode="All"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="{Binding IconHeight}">
+        <Image 
+             Height="{Binding IconHeight}"            
+            Width="{Binding IconHeight}"
+            Source="{Binding CloseIcon}" />
+        </Grid>
+        <Grid x:Name="dragImage" Background="{Binding AviaryThemeColorBrush}"
+              Height="{Binding IconHeight}"
+            Width="{Binding IconHeight}"
+            Visibility="{Binding ManipulationHandlesVisibility}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right">
+        <Image 
+             Height="{Binding IconHeight}"
+            Width="{Binding IconHeight}"
+
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Source="{Binding ExpandIcon}" />
+        </Grid>
+    </Grid>
+</UserControl>

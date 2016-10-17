@@ -1,0 +1,23 @@
+﻿<UserControl
+    x:Class="AviarySDKsWindows8.UI.Controls.AviaryDrawingToolRibbon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AviarySDKsWindows8.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:AviaryControls="using:AviarySDKsWindows8.UI.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="100"
+    d:DesignWidth="400" MaxHeight="{Binding MaxRibbonHeight}">
+
+    <Grid HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".45*" />
+            <RowDefinition Height=".05*" />
+            <RowDefinition Height=".55*" />
+        </Grid.RowDefinitions>
+        <AviaryControls:AviarySpotToolRibbon DataContext="{Binding SpotToolRibbonViewModel}" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+        <Rectangle Grid.Row="1" Fill="Gray" StrokeDashCap="Square" Height="1.8" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <AviaryControls:AviaryColorPickerRibbon Grid.Row="2" DataContext="{Binding ColorPickerViewModel}" VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

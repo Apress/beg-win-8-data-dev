@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FAMILYPC</Machine>
+    <WindowsUser>vinodh</WindowsUser>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\Instashots.exe">
+      <PackagePath>Instashots.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\Instashots.pdb">
+      <PackagePath>Instashots.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\References\CommonConfiguration\x86\Aviary.SDKs.Windows8.Common.winmd">
+      <PackagePath>Aviary.SDKs.Windows8.Common.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\References\CommonConfiguration\x86\AviarySDKsWindows8.winmd">
+      <PackagePath>AviarySDKsWindows8.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\References\CommonConfiguration\x86\Aviary_MoaLite_Windows.winmd">
+      <PackagePath>Aviary_MoaLite_Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.WindowsAzure.Storage.winmd">
+      <PackagePath>Microsoft.WindowsAzure.Storage.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\References\CommonConfiguration\x86\Aviary.SDKs.Windows8.Common.xml">
+      <PackagePath>Aviary.SDKs.Windows8.Common.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\References\CommonConfiguration\x86\AviarySDKsWindows8.xml">
+      <PackagePath>AviarySDKsWindows8.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\GalaSoft.MvvmLight.Extras.Win8.xml">
+      <PackagePath>GalaSoft.MvvmLight.Extras.Win8.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\GalaSoft.MvvmLight.Win8.xml">
+      <PackagePath>GalaSoft.MvvmLight.Win8.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\Microsoft.Practices.ServiceLocation.xml">
+      <PackagePath>Microsoft.Practices.ServiceLocation.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.Data.OData.WindowsStore.xml">
+      <PackagePath>Microsoft.Data.OData.WindowsStore.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.Data.Edm.WindowsStore.xml">
+      <PackagePath>Microsoft.Data.Edm.WindowsStore.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\System.Spatial.WindowsStore.xml">
+      <PackagePath>System.Spatial.WindowsStore.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\References\CommonConfiguration\Neutral\Microsoft.Live.Controls.dll">
+      <PackagePath>Microsoft.Live.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\References\CommonConfiguration\Neutral\Microsoft.Live.dll">
+      <PackagePath>Microsoft.Live.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MobileServicesManagedClient\0.2.0.0\References\CommonConfiguration\neutral\Microsoft.WindowsAzure.MobileServices.Managed.dll">
+      <PackagePath>Microsoft.WindowsAzure.MobileServices.Managed.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\GalaSoft.MvvmLight.Extras.Win8.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\GalaSoft.MvvmLight.Win8.dll">
+      <PackagePath>GalaSoft.MvvmLight.Win8.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.WindowsAzure.Storage.Table.dll">
+      <PackagePath>Microsoft.WindowsAzure.Storage.Table.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.Data.OData.WindowsStore.dll">
+      <PackagePath>Microsoft.Data.OData.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.Data.Edm.WindowsStore.dll">
+      <PackagePath>Microsoft.Data.Edm.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\System.Spatial.WindowsStore.dll">
+      <PackagePath>System.Spatial.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\GalaSoft.MvvmLight.Extras.Win8.pdb">
+      <PackagePath>GalaSoft.MvvmLight.Extras.Win8.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\GalaSoft.MvvmLight.Win8.pdb">
+      <PackagePath>GalaSoft.MvvmLight.Win8.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\Microsoft.Practices.ServiceLocation.pdb">
+      <PackagePath>Microsoft.Practices.ServiceLocation.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.WindowsAzure.Storage.pdb">
+      <PackagePath>Microsoft.WindowsAzure.Storage.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\lib\Microsoft.WindowsAzure.Storage.Table.pdb">
+      <PackagePath>Microsoft.WindowsAzure.Storage.Table.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\10_bow_tie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\10_bow_tie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\10_bow_tie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\10_bow_tie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\11_tie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\11_tie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\11_tie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\11_tie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\12_pipe.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\12_pipe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\12_pipe.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\12_pipe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\13_cigar.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\13_cigar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\13_cigar.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\13_cigar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\14_arrow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\14_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\14_arrow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\14_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\15_green_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\15_green_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\15_green_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\15_green_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\16_orange_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\16_orange_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\16_orange_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\16_orange_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\17_blue_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\17_blue_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\17_blue_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\17_blue_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\18_pink_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\18_pink_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\18_pink_bubble.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\18_pink_bubble.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\19_star.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\19_star.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\19_star.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\19_star.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\1_sombrero.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\1_sombrero.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\1_sombrero.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\1_sombrero.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\20_red_arrow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\20_red_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\20_red_arrow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\20_red_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\21_blue_arrow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\21_blue_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\21_blue_arrow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\21_blue_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\22_green_circle.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\22_green_circle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\22_green_circle.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\22_green_circle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\23_orange_square.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\23_orange_square.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\23_orange_square.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\23_orange_square.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\2_helicopter.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\2_helicopter.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\2_helicopter.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\2_helicopter.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\3_crown.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\3_crown.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\3_crown.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\3_crown.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\4_fez.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\4_fez.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\4_fez.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\4_fez.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\5_3d_glasses.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\5_3d_glasses.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\5_3d_glasses.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\5_3d_glasses.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\6_hipster_glasses.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\6_hipster_glasses.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\6_hipster_glasses.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\6_hipster_glasses.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\7_disguise.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\7_disguise.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\7_disguise.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\7_disguise.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\8_aviators.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\8_aviators.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\8_aviators.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\8_aviators.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\9_eyepatch.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Previews\9_eyepatch.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\9_eyepatch.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Stickers\Free Pack\Stickers\9_eyepatch.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_auto_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_auto_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_auto_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_auto_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_backlit_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_backlit_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_backlit_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_backlit_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_balance_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_balance_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_balance_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_balance_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_night_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_night_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\ah_night_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\ah_night_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\alice.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\alice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\amd.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\amd.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\aqua.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\aqua.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\arizona.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\arizona.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\arizona.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\arizona.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\avenue.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\avenue.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\avenue.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\avenue.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\aviaryribbonbackground.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\aviaryribbonbackground.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\aviary_logo.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\aviary_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\blackandwhite.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\blackandwhite.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\blemish_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\blemish_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\blemish_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\blemish_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\boardwalk.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\boardwalk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\boardwalk.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\boardwalk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\brightness_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\brightness_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\brightness_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\brightness_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\cherry.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\cherry.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\classic.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\classic.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\clyde.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\clyde.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\clyde.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\clyde.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\concorde.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\concorde.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\contrast_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\contrast_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\contrast_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\contrast_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\crop_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\crop_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\crop_invert_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\crop_invert_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\crop_invert_black1.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\crop_invert_black1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\crop_invert_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\crop_invert_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\crop_invert_white1.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\crop_invert_white1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\crop_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\crop_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\cruz.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\cruz.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\cruz.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\cruz.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\dean.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\dean.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\dean.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\dean.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\default.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\default.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\drawTool.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\drawTool.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\drawTool1.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\drawTool1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\draw_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\draw_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\draw_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\draw_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\drifter.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\drifter.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\eddie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\eddie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\effects_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\effects_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\effects_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\effects_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\enhance_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\enhance_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\enhance_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\enhance_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\expand_icon_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\expand_icon_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\expand_icon_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\expand_icon_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\firefly.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\firefly.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\fixie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\fixie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\grunge.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\grunge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\haas.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\haas.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\hass.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\hass.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Hotmail.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Hotmail.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Hotmail_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Hotmail_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\indiglow.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\indiglow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\keylime.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\keylime.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\keylime.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\keylime.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\kurt.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\kurt.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\laguna.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\laguna.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\lucky.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\lucky.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\lucky.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\lucky.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\malibu.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\malibu.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\marie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\marie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\marie.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\marie.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Messenger.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Messenger.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Messenger_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Messenger_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\metropolis.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\metropolis.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\metropolis.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\metropolis.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\mohawk.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\mohawk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\nostalgia.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\nostalgia.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_h_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_h_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_h_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_h_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_v_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_v_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_v_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_flip_v_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_l_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_l_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_l_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_l_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_r_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_r_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_r_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_rotate_r_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\orientation_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\orientation_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\original.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\original.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\redeye_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\redeye_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\redeye_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\redeye_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Default\sage.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Default\sage.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\sage.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\New Effects\sage.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\sancarmen.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\sancarmen.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\saturation_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\saturation_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\saturation_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\saturation_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\sepia.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\sepia.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\sharpness_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\sharpness_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\sharpness_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\sharpness_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\siesta.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\siesta.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\singe.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\singe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\SkyDrive.png">
+      <PackagePath>Microsoft.Live.Controls\Images\SkyDrive.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\SkyDrive_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\SkyDrive_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\snap_screen.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\snap_screen.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\softfocus.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\softfocus.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle1_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle1_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle1_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle1_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle2_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle2_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle2_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle2_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle3_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle3_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle3_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle3_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle4_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle4_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle4_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle4_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle5_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle5_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle5_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle5_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\spot_circle_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\spot_circle_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\stickers_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\stickers_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\stickers_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\stickers_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\strato.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\strato.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\text_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\text_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\text_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\text_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\ventura.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\ventura.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\viewfinder.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\viewfinder.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\vigilante.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Grunge\vigilante.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Original\vivid.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Original\vivid.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\vogue.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Effect Previews\Nostalgia\vogue.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\whiten_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\whiten_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\whiten_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\whiten_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Windows.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Windows.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Windows_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Windows_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\x_icon_black.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\x_icon_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Assets\Icons\x_icon_white.png">
+      <PackagePath>AviarySDKsWindows8\UI\Assets\Icons\x_icon_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\x86\Aviary.MoaLite.Windows.dll">
+      <PackagePath>Aviary.MoaLite.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\x86\Aviary.SDKs.Windows8.Common.WriteableBitmapExtensions.winmd">
+      <PackagePath>Aviary.SDKs.Windows8.Common.WriteableBitmapExtensions.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryAutoEnhanceToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryAutoEnhanceToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryColorPickerRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryColorPickerRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryCropOverlay.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryCropOverlay.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryCroppingToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryCroppingToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryDrawingToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryDrawingToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Views\AviaryEditor.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Views\AviaryEditor.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryEditorRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryEditorRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryEffectsRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryEffectsRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryOrientationToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryOrientationToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\Themes\AviaryResources.xaml">
+      <PackagePath>AviarySDKsWindows8\Themes\AviaryResources.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviarySliderOperationRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviarySliderOperationRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviarySpotToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviarySpotToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryStickerContainer.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryStickerContainer.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryStickersToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryStickersToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryTextControl.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryTextControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinodh\AppData\Local\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Aviary Photo Editing SDK\1.0\Redist\CommonConfiguration\neutral\AviarySDKsWindows8\UI\Controls\AviaryTextToolRibbon.xaml">
+      <PackagePath>AviarySDKsWindows8\UI\Controls\AviaryTextToolRibbon.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\DSC_1753.JPG">
+      <PackagePath>Assets\DSC_1753.JPG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\MVVMLight.Nuget.Readme.txt">
+      <PackagePath>MVVMLight.Nuget.Readme.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\Common\QuickStartTask.xaml">
+      <PackagePath>Common\QuickStartTask.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\">
+      <Name>Microsoft.VCLibs.110.00.Debug</Name>
+      <Version>11.0.51106.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.110.00.Debug, MinVersion = 11.0.51106.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.11.00.appx</AppxLocation>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\">
+      <Name>Microsoft.VCLibs.110.00.Debug</Name>
+      <Version>11.0.51106.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.110.00.Debug, MinVersion = 11.0.51106.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.11.00.appx</AppxLocation>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\">
+      <Name>Microsoft.VCLibs.110.00.Debug</Name>
+      <Version>11.0.51106.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.110.00.Debug, MinVersion = 11.0.51106.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.11.00.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

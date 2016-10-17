@@ -1,0 +1,205 @@
+﻿<Infrastructure:VisualStateAwarePage
+    x:Name="pageRoot"
+    x:Class="BOM.Views.BillOfMaterialPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BOM.Views"
+    xmlns:Infrastructure="using:Microsoft.Practices.Prism.StoreApps"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Infrastructure:ViewModelLocator.AutoWireViewModel="true"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Bill of Material</x:String>
+        <DataTemplate x:Key="BOMDataTemplate">
+        	<StackPanel>
+        		<TextBlock TextWrapping="Wrap" Text="{Binding BOMPart.PartName}" FontSize="16" Foreground="#FFFDFDFD"/>
+        		<StackPanel Orientation="Horizontal">
+        			<TextBlock TextWrapping="Wrap" Text="Avaliable Stock: " Height="20" Foreground="#FFEC7524"/>
+        			<Border Height="20" Background="#FFF92020" Margin="10,0" Padding="3,0">
+        				<TextBlock TextWrapping="Wrap" Text="{Binding BOMPart.StockCount}" Margin="3,0" Foreground="White" FontWeight="Bold"/>
+        			</Border>
+        			<TextBlock TextWrapping="Wrap" Text=" Required Part: " Height="20" Foreground="#FFEC7524"/>
+        			<Border Height="20" Background="#FF31A2F0" Margin="10,0,3,0" Padding="3,0">
+        				<TextBlock TextWrapping="Wrap" Text="{Binding Quantity}" Margin="3,0" Foreground="White" FontWeight="Bold"/>
+        			</Border>
+        		</StackPanel>
+        	</StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="ComponentDataTemplate">
+
+        	<StackPanel Margin="0,0,0,25">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Orientation="Horizontal">
+					 <TextBlock TextWrapping="Wrap" Text="{Binding ComponentName}" Height="30" FontSize="21.333" HorizontalAlignment="Left"/>
+							 </StackPanel>
+				<StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button Content="Add Part"  Command="{Binding AddPartsCommand, Mode=OneWay}" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
+				</StackPanel>
+			</Grid>        		
+        	<ListBox  ItemsSource="{Binding BOMComponents}" ItemTemplate="{StaticResource BOMDataTemplate}" Background="#FF353C41"/>
+				 
+        	</StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="PartDataTemplate">
+        	<StackPanel Margin="0,0,0,15">
+        		<TextBlock TextWrapping="Wrap" Text="{Binding PartName}" FontSize="21.333" Margin="0,0,0,5"/>
+        		<StackPanel Orientation="Horizontal">
+        			<TextBlock TextWrapping="Wrap" Text="Avaliable Stock: " Height="20" Foreground="#FFEC7524"/>
+        			<Border Height="20" Background="#FFF92020" Margin="10,0" Padding="3,0">
+        				<TextBlock TextWrapping="Wrap" Text="{Binding StockCount}" Margin="3,0" Foreground="White"/>
+        			</Border>        			 
+        		</StackPanel>
+        	</StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+	<Infrastructure:VisualStateAwarePage.BottomAppBar>
+		<AppBar>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Orientation="Horizontal">
+					  <Button x:Name="AddComponent"                           
+                           Command="{Binding OpenComponentCommand, Mode=OneWay}" Style="{StaticResource AddComponentAppBarButtonStyle}"
+                             />
+							 </StackPanel>
+				<StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+					<Button x:Name="AddPart"                           
+						Command="{Binding OpenPartCommand, Mode=OneWay}" Style="{StaticResource AddPartAppBarButtonStyle}"
+                             />
+				</StackPanel>
+			</Grid>
+		</AppBar>
+	</Infrastructure:VisualStateAwarePage.BottomAppBar>
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF2C3339">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="769*"/>
+    		<ColumnDefinition Width="597*"/>
+    	</Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="145*"/>
+        </Grid.RowDefinitions>
+		 <Popup x:Name="AddComponentPopup"
+               x:Uid="AddComponentPopup"
+               AutomationProperties.AutomationId="AddComponentPopup"
+               IsLightDismissEnabled="True"
+               IsOpen="{Binding IsAddComponentPopupOpened, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="20,20,0,0">
+           <Border Height="Auto" Width="Auto" Margin="0" BorderBrush="#FF2C3339" BorderThickness="1" Background="#FF080707">
+		 		<Grid Background="#FF080808" x:Name="addComponent" Height="150" Width="273" Margin="5">
+		 			<Grid.RowDefinitions>
+		 				<RowDefinition Height="Auto" />
+		 				<RowDefinition Height="Auto" />
+		 				<RowDefinition Height="38"/>
+		 			</Grid.RowDefinitions>
+		 			<Grid.ColumnDefinitions>
+		 				<ColumnDefinition Width="Auto" />
+		 				<ColumnDefinition Width="*" />
+		 			</Grid.ColumnDefinitions>
+		 			<TextBlock Margin="10" Grid.Column="0" Grid.Row="0" Text="Component" Grid.ColumnSpan="2" Style="{StaticResource HeaderTextStyle}" FontSize="21.333" />
+		 			<TextBlock Margin="10,0,8,0" Grid.Column="0" Grid.Row="1" Text="Component Name" Style="{StaticResource ResourceKey=SubheaderTextStyle}" FontSize="13.333" />
+                    <TextBox Margin="10" Grid.Column="1" Grid.Row="1" x:Name="txtComponentName" Text="{Binding ComponentName, Mode=TwoWay}"/>
+                    <Button Command="{Binding AddComponentCommand, Mode=OneWay}" Content="Save"  Margin="0,0,20,0" Grid.Row="2" Grid.Column="1" Height="35" HorizontalAlignment="Right"  />
+		 		</Grid>
+		 	</Border>
+        </Popup>
+        	 <Popup x:Name="AddPartPopup"
+               x:Uid="AddPartPopup"
+               AutomationProperties.AutomationId="AddPartPopup"
+               IsLightDismissEnabled="True"
+               IsOpen="{Binding IsAddPartPopupOpened, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="20,20,0,0">
+           <Border Height="Auto" Width="Auto" Margin="0" BorderBrush="#FF2C3339" BorderThickness="1" Background="#FF080707">
+		 		<Grid Background="#FF080808" x:Name="addPart" Height="220" Width="273" Margin="5">
+		 			<Grid.RowDefinitions>
+		 				<RowDefinition Height="Auto" />
+		 				<RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+		 				<RowDefinition Height="38"/>
+		 			</Grid.RowDefinitions>
+		 			<Grid.ColumnDefinitions>
+		 				<ColumnDefinition Width="Auto" />
+		 				<ColumnDefinition Width="*" />
+		 			</Grid.ColumnDefinitions>
+		 			<TextBlock Margin="10" Grid.Column="0" Grid.Row="0" Text="Part" Grid.ColumnSpan="2" Style="{StaticResource HeaderTextStyle}" FontSize="21.333" />
+		 			<TextBlock Margin="10,0,8,0" Grid.Column="0" Grid.Row="1" Text="Part Name" Style="{StaticResource ResourceKey=SubheaderTextStyle}" FontSize="13.333" />
+                    <TextBox Margin="10" Grid.Column="1" Grid.Row="1"  Text="{Binding PartName, Mode=TwoWay}"/>
+                    <TextBlock Margin="10,0,8,0" Grid.Column="0" Grid.Row="2" Text="Quantity" Style="{StaticResource ResourceKey=SubheaderTextStyle}" FontSize="13.333" />
+                    <TextBox Margin="10" Grid.Column="1" Grid.Row="2" Text="{Binding StockCount, Mode=TwoWay}"/>
+                    <Button Command="{Binding AddPartCommand, Mode=OneWay}" Content="Save"  Margin="0,0,20,0" Grid.Row="3" Grid.Column="1" Height="35" HorizontalAlignment="Right"  />
+		 		</Grid>
+		 	</Border>
+        </Popup>
+
+        <Popup x:Name="AddBOMPopup"
+               x:Uid="AddBOMPopup"
+               AutomationProperties.AutomationId="AddBOMPopup"
+               IsLightDismissEnabled="True"
+               IsOpen="{Binding IsShowBOMPopupOpened, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border Height="Auto" Width="Auto" Margin="0" BorderBrush="#FF2C3339" BorderThickness="1" Background="#FF080707">
+                <Grid Background="#FF080808" Height="460" Width="500" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="38"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Margin="10" Grid.Column="0" Grid.Row="0" Text="Add to BOM" Grid.ColumnSpan="2" Style="{StaticResource HeaderTextStyle}" FontSize="21.333" />
+                    <ListView Grid.Row="1" ItemsSource="{Binding Parts}" SelectedItem="{Binding SelectedPart, Mode=TwoWay}"  ItemTemplate="{StaticResource PartDataTemplate}" Grid.Column="0"  Grid.ColumnSpan="2" Margin="5,0,0,0" Height="300"/>
+                    <TextBlock Margin="10,0,8,0" Grid.Column="0" Grid.Row="2" Text="Quantity" Style="{StaticResource ResourceKey=SubheaderTextStyle}" FontSize="13.333" />
+                    <TextBox Margin="10" Grid.Column="1" Grid.Row="2" Text="{Binding BOMQuantity, Mode=TwoWay}"/>
+                    <Button Command="{Binding AddBOMCommand, Mode=OneWay}" Content="Save"  Margin="0,10,20,0" Grid.Row="3" Grid.Column="1" Height="35" HorizontalAlignment="Right"  />
+                </Grid>
+            </Border>
+        </Popup>
+        <!-- Back button and page title -->
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding HeaderLabel}" Style="{StaticResource PageHeaderTextStyle}" Margin="30,0,30,40"/>
+        </Grid>
+        <ListView Grid.Row="2" ItemsSource="{Binding Components}" ItemTemplate="{StaticResource ComponentDataTemplate}" Margin="30,0,0,0"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Components" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Parts" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,2" Grid.Column="1"/>
+        <ListView Grid.Row="2" ItemsSource="{Binding Parts}" ItemTemplate="{StaticResource PartDataTemplate}" Grid.Column="1" Margin="30,0,0,0"/>		
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="Filled"/>
+                <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
+                <VisualState x:Name="FullScreenPortrait"/>
+                <!-- The back button and title have different styles when snapped -->
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+    </Infrastructure:VisualStateAwarePage>
+

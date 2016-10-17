@@ -1,0 +1,66 @@
+﻿.movieDetail p {
+    margin-left: 120px;
+}
+
+    
+ .detailView
+    {
+        margin-left: 120px;
+        width: 500px;
+    }
+    
+    .movieDetail h3 {
+        display: block;
+        width: 300px;
+        float: left;
+        margin-bottom: 40px;
+         margin-top: 40px;
+        font-size: 20px;
+    }
+    .movieDetail label 
+    {
+        display: block;
+        width: 120px;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .movieDetail input
+    {
+        display: block;
+        width: 180px;
+        float: left;
+        margin-bottom: 10px;
+    }
+     
+     .movieDetail img
+    {
+        display: block;        
+        float: right;
+        margin-left: 10px;
+    }
+    .creatButton
+    {
+        display: block;       
+        float: left;
+        margin-left: 60px;
+        margin-top: 40px;
+    }
+
+    .deleteButton
+    {
+        display: block;       
+        float: right;
+        margin-right: 100px;
+        margin-top: 40px;
+    }
+ 
+    .movieDetail label
+    {
+        text-align: left;         
+    }
+ 
+    br
+    {
+        clear: left;
+    }

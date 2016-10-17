@@ -1,0 +1,18 @@
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bin\Debug\resources.pri
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bin\Debug\AppxManifest.xml
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bin\Debug\ReadItLater.build.appxrecipe
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bld\Debug\priconfig.xml
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bld\Debug\layout.resfiles
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bld\Debug\resources.resfiles
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bld\Debug\pri.resfiles
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bld\Debug\LanguageQualifiers.txt
+C:\Users\vinodh\SkyDrive\Book8\Code\Chapter2\ReadItLater\ReadItLater\bld\Debug\ProjectArchitectures.txt
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bin\Debug\resources.pri
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bin\Debug\AppxManifest.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bin\Debug\ReadItLater.build.appxrecipe
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bld\Debug\priconfig.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bld\Debug\layout.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bld\Debug\resources.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bld\Debug\pri.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bld\Debug\LanguageQualifiers.txt
+D:\SkyDrive\Book8\Code\9781430249924 _ch02\ReadItLater\bld\Debug\ProjectArchitectures.txt

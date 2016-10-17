@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="WinRTDatabase" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="WinRTDatabase">
+			<ResourceMapSubtree name="Resources">
+				<NamedResource name="DatabaseDoesNotExistsExceptionText" uri="ms-resource://WinRTDatabase/WinRTDatabase/Resources/DatabaseDoesNotExistsExceptionText">
+					<Candidate type="String">
+						<Value>Database {0} does not exists</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DatabaseExistsExceptionText" uri="ms-resource://WinRTDatabase/WinRTDatabase/Resources/DatabaseExistsExceptionText">
+					<Candidate type="String">
+						<Value>Database {0} already exists</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="OpenError" uri="ms-resource://WinRTDatabase/WinRTDatabase/Resources/OpenError">
+					<Candidate type="String">
+						<Value>Cannot open database. See InnerException for details</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SaveError" uri="ms-resource://WinRTDatabase/WinRTDatabase/Resources/SaveError">
+					<Candidate type="String">
+						<Value>Cannot save data. See InnerException for details</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="TableExistsExceptionText" uri="ms-resource://WinRTDatabase/WinRTDatabase/Resources/TableExistsExceptionText">
+					<Candidate type="String">
+						<Value>Table {0} already exists</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="TableWithoutDatabaseCannotBeSaved" uri="ms-resource://WinRTDatabase/WinRTDatabase/Resources/TableWithoutDatabaseCannotBeSaved">
+					<Candidate type="String">
+						<Value>Table without database cannot be saved</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

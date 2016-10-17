@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aviary.SDKs.Windows8.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Aviary.SDKs.Windows8.Common.AviaryToolOptions">
+            <summary>
+            Enum AviaryToolOptions
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.AutoEnhance">
+            <summary>
+            The auto enhance tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Blemish">
+            <summary>
+            The blemish tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Brightness">
+            <summary>
+            The brightness tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Contrast">
+            <summary>
+            The contrast tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Crop">
+            <summary>
+            The crop tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Drawing">
+            <summary>
+            The drawing tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Effects">
+            <summary>
+            The effects tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Orientation">
+            <summary>
+            The orientation tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.RedEye">
+            <summary>
+            The red eye tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Saturation">
+            <summary>
+            The saturation tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Sharpness">
+            <summary>
+            The sharpness tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Stickers">
+            <summary>
+            The stickers tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Text">
+            <summary>
+            The text tool
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryToolOptions.Whiten">
+            <summary>
+            The whiten tool
+            </summary>
+        </member>
+        <member name="T:Aviary.SDKs.Windows8.Common.ViewModels.BindableBase">
+            <summary>
+            Implementation of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> to simplify models.
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.ViewModels.BindableBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Checks if a property already matches a desired value.  Sets the property and
+            notifies listeners only when necessary.
+            </summary>
+            <typeparam name="T">Type of the property.</typeparam>
+            <param name="storage">Reference to a property with both getter and setter.</param>
+            <param name="value">Desired value for the property.</param>
+            <param name="propertyName">Name of the property used to notify listeners.  This
+            value is optional and can be provided automatically when invoked from compilers that
+            support CallerMemberName.</param>
+            <returns>True if the value was changed, false if the existing value matched the
+            desired value.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Aviary.SDKs.Windows8.Common.ViewModels.BindableBase.RaisePropertyChanged(System.String)" -->
+        <member name="E:Aviary.SDKs.Windows8.Common.ViewModels.BindableBase.PropertyChanged">
+            <summary>
+            Multicast event for property change notifications.
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Imaging.DirectXInteropServices.AviaryDrawStringArgs.#ctor(System.String,System.Single,System.String,System.Double,System.Double,System.Double,Windows.UI.Color,Windows.UI.Color)">
+            <summary>
+            Summary for AviaryDrawStringArgs
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetStore">
+            <summary>
+            Caches the reference to the app's isolated storage
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetNumberOfStoredSessions">
+            <summary>
+            Tallies up the number of files whose name starts w/ sessionFilePrefix in the localytics dir
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetStreamForFile(System.String)">
+            <summary>
+            Gets a stream pointing to the requested file.  If the file does not exist it is created.
+            </summary>
+            <param name="filename">Name of the file (w/o directory) to create</param>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.AppendTextToFile(System.String,System.String)">
+            <summary>
+            Appends a string to the end of a text file.
+            </summary>
+            <param name="text">Text to append</param>
+            <param name="filename">Name of file to append to</param>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetFileContents(System.String)">
+            <summary>
+            Reads a file and returns its contents as a string
+            </summary>
+            <param name="filename">file to read (w/o directory prefix)</param>
+            <returns>the contents of the file</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetUploadContents">
+            <summary>
+            Goes through all the upload files and collects their contents for upload
+            </summary>
+            <returns>A string containing the concatenated </returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.DeleteUploadFiles">
+            <summary>
+            loops through all the files in the directory deleting the upload files
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.RenameOrAppendSessionFiles">
+            <summary>
+            Rename any open session files. This way events recorded during uploaded get written safely to disk
+            and threading difficulties are missed.
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.BeginUpload">
+            <summary>
+            Runs on a seperate thread and is responsible for renaming and uploading files as appropriate
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetSequenceNumber">
+            <summary>
+            Gets the sequence number for the next upload blob.
+            </summary>
+            <returns>Sequence number as a string</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.SetNextSequenceNumber(System.String)">
+            <summary>
+            Sets the next sequence number in the metadata file. Creates the file if its not already there
+            </summary>
+            <param name="number">Next sequence number</param>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetPersistStoreCreateTime">
+            <summary>
+            Gets the timestamp of the storage file containing the sequence numbers. This allows processing to
+            ignore duplicates or identify missing uploads
+            </summary>
+            <returns>A string containing a Unixtime</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetInstallId">
+            <summary>
+            Gets the Installation ID out of the metadata file
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetAppVersion">
+            <summary>
+            Retreives the Application Version from the metadata
+            </summary>
+            <returns>User generated app version</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetDatestring">
+            <summary>
+            Gets the current date/time as a string which can be inserted in the DB
+            </summary>
+            <returns>A formatted string with date, time, and timezone information</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetTimeInUnixTime">
+            <summary>
+            Gets the current time in unixtime
+            </summary>
+            <returns>The current time in unixtime</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.GetBlobHeader">
+            <summary>
+            Constructs a blob header for uploading
+            </summary>
+            <returns>A string containing a blob header</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.EscapeString(System.String)">
+            <summary>
+            Formats an input string for YAML
+            </summary>
+            <returns>string sorrounded in quotes, with dangerous characters escaped</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.LogMessage(System.String)">
+            <summary>
+            Outputs a message to the debug console
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.#ctor(System.String,System.String)">
+            <summary>
+            Creates a Localytics Session object
+            </summary>
+            <param name="appKey"> The key unique for each application generated at www.localytics.com</param>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.Open">
+            <summary>
+            Opens or resumes the Localytics session.
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.Close">
+            <summary>
+            Closes the Localytics session.
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.Upload">
+            <summary>
+            Creates a new thread which collects any files and uploads them. Returns immediately if an upload
+            is already happenning.
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Utilities.LocalyticsSession.TagEvent(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Records a specific event as having occured and optionally records some attributes associated with this event.
+            This should not be called inside a loop. It should not be used to record personally identifiable information
+            and it is best to define all your event names rather than generate them programatically.
+            </summary>
+            <param name="eventName">The name of the event which occured. E.G. 'button pressed'</param>
+            <param name="attributes">Key value pairs that record data relevant to the event.</param>
+        </member>
+        <member name="T:Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs">
+            <summary>
+            Class AviaryTaskCompletedEventArgs
+            </summary>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs.Result">
+            <summary>
+            Gets the result.
+            </summary>
+            <value>The result.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs.EditedPhoto">
+            <summary>
+            Gets the edited photo.
+            </summary>
+            <value>The edited photo.</value>
+        </member>
+        <member name="T:Aviary.SDKs.Windows8.Common.AviaryTaskResult">
+            <summary>
+            Enum: AviaryTaskResult, specifies the result of an AviaryEditorTask
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryTaskResult.Unknown">
+            <summary>
+            The unknown
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryTaskResult.Canceled">
+            <summary>
+            The canceled
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryTaskResult.Completed">
+            <summary>
+            The completed
+            </summary>
+        </member>
+        <member name="F:Aviary.SDKs.Windows8.Common.AviaryTaskResult.Failed">
+            <summary>
+            The failed
+            </summary>
+        </member>
+        <member name="T:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto">
+            <summary>
+            Interface IAviaryPhoto
+            </summary>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.RetrievePhoto(Windows.UI.Xaml.Media.Imaging.WriteableBitmap@,System.Boolean,System.Boolean)">
+            <summary>
+            Manually Retrieves the photo.
+            </summary>
+            <param name="bitmapToInitialize">The bitmap to initialize.</param>
+            <param name="retrieveHiRes">if set to <c>true</c> [retrieve hi res].</param>
+            <param name="useLowResIfFailOnHiRes">if set to <c>true</c> [use low res (1MP) if fail on hi res].</param>
+            <returns><c>true</c> if successful, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.RetrievePhotoData(System.Byte[]@,System.Int32@,System.Int32@,System.Boolean,System.Boolean)">
+            <summary>
+            Manually Retrieves the photo data.
+            </summary>
+            <param name="dataToInitialize">The data to initialize.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="retrieveHiRes">if set to <c>true</c> [retrieve hi res].</param>
+            <param name="useLowResIfFailOnHiRes">if set to <c>true</c> [use low res (1MP) if fail on hi res].</param>
+            <returns><c>true</c> if successful, <c>false</c> otherwise</returns>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.OriginalWidth">
+            <summary>
+            Gets the width of the original.
+            </summary>
+            <value>The width of the original.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.OriginalHeight">
+            <summary>
+            Gets the height of the original.
+            </summary>
+            <value>The height of the original.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.Width">
+            <summary>
+            Gets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.Height">
+            <summary>
+            Gets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.ImageData">
+            <summary>
+            Gets the image data.
+            </summary>
+            <value>The image data.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.OriginalImageData">
+            <summary>
+            Gets the original image data.
+            </summary>
+            <value>The original image data.</value>
+        </member>
+        <member name="P:Aviary.SDKs.Windows8.Common.Models.IAviaryPhoto.Image">
+            <summary>
+            Gets the image.
+            </summary>
+            <value>The image.</value>
+        </member>
+    </members>
+</doc>

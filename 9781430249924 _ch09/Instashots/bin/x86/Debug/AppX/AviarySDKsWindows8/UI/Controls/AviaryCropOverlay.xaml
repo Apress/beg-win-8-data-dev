@@ -1,0 +1,125 @@
+﻿<UserControl
+    x:Class="AviarySDKsWindows8.UI.Controls.AviaryCropOverlay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AviarySDKsWindows8.UI.Controls"
+      xmlns:AviaryCommon="using:Aviary.SDKs.Windows8.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <!--<ResourceDictionary Source="../../Themes/AviaryResources.xaml" /> -->
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot2" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Width="{Binding TopLayoutRootWidth}"
+               Height="{Binding TopLayoutRootHeight}">
+        <Grid x:Name="ImgCropContainer" RenderTransform="{Binding ImageCropContainerTransform}">
+            <Image x:Name="ImgCrop"
+                            Clip="{Binding ImageCropClippingRegion}"
+                            RenderTransformOrigin="{Binding ImageCropContainerRenderTransformOrigin}"
+                   RenderTransform="{Binding ImageCropContainerTransform}"
+                   Source="{Binding EditorPhoto.Image}"
+                   Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </Image>
+        </Grid>
+
+        <Grid  x:Name="LayoutRoot"
+
+               Height="{Binding LayoutRootHeight}"
+               Width="{Binding LayoutRootWidth}"
+               RenderTransform="{Binding LayoutRootTransform}"
+              RenderTransformOrigin="{Binding LayoutRootRenderTransformOrigin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{Binding LayoutRootColumnsWidth}" />
+                <ColumnDefinition Width="{Binding LayoutRootColumnsWidth}" />
+                <ColumnDefinition Width="{Binding LayoutRootColumnsWidth}" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{Binding LayoutRootRowsHeight}" />
+                <RowDefinition Height="{Binding LayoutRootRowsHeight}" />
+                <RowDefinition Height="{Binding LayoutRootRowsHeight}" />
+            </Grid.RowDefinitions>
+
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="1.5" Fill="White" Grid.ColumnSpan="3" />
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="1.5" Fill="White" Grid.ColumnSpan="3" />
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="1.5" Fill="White" Grid.Row="1" Grid.ColumnSpan="3" />
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="1.5" Fill="White" Grid.Row="2" Grid.ColumnSpan="3" />
+
+            <Rectangle HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="1.5" Fill="White" Grid.RowSpan="3" />
+            <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="1.5" Fill="White" Grid.RowSpan="3" />
+            <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="1.5" Fill="White" Grid.Column="1" Grid.RowSpan="3" />
+            <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="1.5" Fill="White" Grid.Column="2" Grid.RowSpan="3" />
+
+            <Grid Margin="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="#01000001" />
+
+            <Grid
+                Background="{StaticResource AviaryAlmostTransparentBrush}"
+                 x:Name="btn_LT"
+                RenderTransform="{Binding TopLeftDragButtonTransform}"
+                Margin="{Binding TopLeftButtonMargin}"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="{Binding DragHandleHeightAndWidth}"
+                Height="{Binding DragHandleHeightAndWidth}">
+                <Border  Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}">
+                    <Rectangle Width="14" Height="14" Fill="{StaticResource AviaryBlueBrush}" />
+                </Border>
+            </Grid>
+            <Grid
+                Background="{StaticResource AviaryAlmostTransparentBrush}"
+                 x:Name="btn_RT"
+                RenderTransform="{Binding TopRightDragButtonTransform}"
+
+                Margin="{Binding TopRightButtonMargin}"
+                Grid.Column="3"
+                Grid.Row="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Width="{Binding DragHandleHeightAndWidth}"
+                Height="{Binding DragHandleHeightAndWidth}">
+
+                <Border BorderBrush="White" BorderThickness="0"  Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}">
+                    <Rectangle Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}" Fill="{StaticResource AviaryBlueBrush}" StrokeThickness="0" />
+                </Border>
+            </Grid>
+            <Grid
+                Background="{StaticResource AviaryAlmostTransparentBrush}"
+                 x:Name="btn_LB"
+                RenderTransform="{Binding BottomLeftDragButtonTransform}"
+
+                Margin="{Binding BottomLeftButtonMargin}"
+                Grid.Column="0"
+                Grid.Row="3"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Width="{Binding DragHandleHeightAndWidth}"
+                Height="{Binding DragHandleHeightAndWidth}">
+
+                <Border BorderBrush="White" BorderThickness="0"  Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}">
+                    <Rectangle Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}" Fill="{StaticResource AviaryBlueBrush}" />
+                </Border>
+            </Grid>
+            <Grid
+                Background="{StaticResource AviaryAlmostTransparentBrush}"
+                 x:Name="btn_RB"
+                RenderTransform="{Binding BottomRightDragButtonTransform}"
+
+                Margin="{Binding BottomRightButtonMargin}"
+                Grid.Column="3"
+                Grid.Row="3"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Width="{Binding DragHandleHeightAndWidth}"
+                Height="{Binding DragHandleHeightAndWidth}">
+
+                <Border BorderBrush="White" BorderThickness="0" Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}">
+                    <Rectangle Width="{Binding DragIconWidth}" Height="{Binding DragIconHeight}" Fill="{StaticResource AviaryBlueBrush}" />
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

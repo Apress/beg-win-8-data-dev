@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="228df56a-be52-41c5-be8f-4d45344846f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:18017/BOMServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BOMServices.xsd" MetadataType="Schema" ID="08c8d37f-37db-404d-918b-ef089dce4725" SourceId="1" SourceUrl="http://localhost:18017/BOMServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="BOMServices1.xsd" MetadataType="Schema" ID="cf9228f4-cbbf-4ecc-b4b8-7755189b6986" SourceId="1" SourceUrl="http://localhost:18017/BOMServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="BOMServices.disco" MetadataType="Disco" ID="c3c85c3b-9bab-4073-9464-6744d882d669" SourceId="1" SourceUrl="http://localhost:18017/BOMServices.svc?disco" />
+    <MetadataFile FileName="BOMServices2.xsd" MetadataType="Schema" ID="5166037a-9d96-4f2f-971d-e6440169ad5a" SourceId="1" SourceUrl="http://localhost:18017/BOMServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="BOMServices.wsdl" MetadataType="Wsdl" ID="3160d0de-8f5e-4fff-8ac1-175009f72747" SourceId="1" SourceUrl="http://localhost:18017/BOMServices.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

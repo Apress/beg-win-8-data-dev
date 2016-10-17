@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FAMILYPC</Machine>
+    <WindowsUser>vinodh</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>B72ADBB52FEA4E862B348313776951A6E2723F96A9D6831C79E0ED10715E0E69</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>e3d160a0-4de6-4548-8df0-762637c6dc75_1.0.0.0_neutral__4sxw0mv063akm</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>e3d160a0-4de6-4548-8df0-762637c6dc75_4sxw0mv063akm!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>e3d160a0-4de6-4548-8df0-762637c6dc75</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=vinodh</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T02:48:15.677</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\BOM.exe">
+      <PackagePath>BOM.exe</PackagePath>
+      <Modified>2013-07-23T03:23:52.797</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\BOM.pdb">
+      <PackagePath>BOM.pdb</PackagePath>
+      <Modified>2013-07-23T03:23:52.776</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.pdb">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.pdb</PackagePath>
+      <Modified>2013-07-23T02:48:08.610</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll">
+      <PackagePath>Microsoft.Practices.Prism.PubSubEvents.dll</PackagePath>
+      <Modified>2013-07-23T02:48:08.410</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.StoreApps\bin\Debug\Microsoft.Practices.Prism.StoreApps.dll">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.dll</PackagePath>
+      <Modified>2013-07-23T02:48:08.642</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\packages\Unity.3.0.1304.0\lib\NetCore45\Microsoft.Practices.Unity.NetCore.dll">
+      <PackagePath>Microsoft.Practices.Unity.NetCore.dll</PackagePath>
+      <Modified>2013-07-22T04:28:37.066</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\Prism.PubSubEvents\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.pdb">
+      <PackagePath>Microsoft.Practices.Prism.PubSubEvents.pdb</PackagePath>
+      <Modified>2013-07-23T02:48:08.388</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2013-06-22T05:57:09.155</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-06-22T06:14:10.682</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-07-21T03:49:53.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-06-22T05:32:22.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\Views\BillOfMaterialPage.xaml">
+      <PackagePath>Views\BillOfMaterialPage.xaml</PackagePath>
+      <Modified>2013-07-22T04:27:53.196</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch08\Code\BOM\BOM\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-07-23T03:10:20.580</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>movieDetail</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <link href="/pages/details/movieDetail.css" rel="stylesheet" />
+    <script src="/pages/details/movieDetail.js"></script>
+</head>
+<body>
+    <div class="movieDetail fragment">
+        <header 
+            aria-label="Header content" 
+            role="banner">
+            <button 
+                class="win-backbutton" 
+                aria-label="Back" 
+                disabled 
+                type="button" />
+            <h1 
+                class="titlearea win-type-ellipsis">
+                <span class="pagetitle">My Collection</span>
+            </h1>
+        </header>
+        <section 
+            aria-label="Main content" 
+            role="main">
+            <div 
+                id="divDetail" 
+                class="detailView">
+                <h3 id="title">Edit Movie</h3>
+                <br />
+                <!--Movie Image-->
+                <img 
+                    src="#" 
+                    data-win-bind="src: poster; alt: title" />
+                <!--Movie Title-->
+                <label>Title</label>
+                <input 
+                    id="txtTitle" 
+                    type="text" 
+                    data-win-bind="value: title Binding.Mode.twoway" />
+                <br>
+                <!--Movie Release Year-->
+                <label>Year</label>
+                <input 
+                    id="txtYear" 
+                    type="text" 
+                    data-win-bind="value: year Binding.Mode.twoway" />
+                <br>
+                <!--Movie Status-->
+                <label>Status</label>
+                <select 
+                    id="status" 
+                    data-win-bind="selected: status; value: status Binding.Mode.twoway">
+                    <option value="Avaliable">Avaliable</option>
+                    <option value="Lend Out">Lend Out</option>
+                    <option value="Rented">Borrowed</option>
+                </select>
+                <br />
+            </div>
+        </section>
+    </div>
+
+    <!--App bar-->
+    <div 
+        data-win-control="WinJS.UI.AppBar" 
+        class="appBar" 
+        id="appBar">
+        <!--Save Movie Button-->
+        <button 
+            data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'saveButton', label:'Save', icon:'save',section:'global'}"/>
+        <!--Delete Movie Button-->
+        <button 
+            data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'deleteButton', label:'Delete', icon:'delete',section:'global'}"/>         
+    </div>
+</body>
+</html>

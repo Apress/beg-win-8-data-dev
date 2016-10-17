@@ -1,0 +1,70 @@
+﻿<UserControl
+    x:Class="AviarySDKsWindows8.UI.Controls.AviaryTextControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AviarySDKsWindows8.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="125"
+    d:DesignWidth="253"
+    HorizontalAlignment="Center"
+     VerticalAlignment="Center"
+
+     RenderTransformOrigin="0.5,0.5"
+    RenderTransform="{Binding ContainerTransform}">
+    <UserControl.Resources>
+        <!--<ResourceDictionary Source="../../Themes/AviaryResources.xaml" />-->
+    </UserControl.Resources>
+    <Grid  RenderTransformOrigin="0.5,0.5" x:Name="mainGrid" MinWidth="{Binding InitialWidth}">
+        <Button Height="0" Width="0" Visibility="Visible" Opacity="0" x:Name="hiddenButton" />
+        <Border
+            RenderTransformOrigin="0.5,0.5"
+            BorderBrush="{StaticResource AviaryTextControlBorderBrush}"
+            BorderThickness="1"
+            Background="{StaticResource AviaryTextControlBackgroundBrush}">
+            <Grid x:Name="textboxesGrid" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBox IsHitTestVisible="False"
+                         FontStretch="{Binding FontStretch}"
+				 Style="{StaticResource AviaryTextToolTextBoxStyle}"
+                 Text="{Binding Text, ElementName=textBox, Mode=OneWay}"
+				 Foreground="{Binding BackgroundBrush}"
+                  MinHeight="{Binding MinHeight}"
+                MinWidth="{Binding MinWidth}"
+                  FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" CharacterSpacing="{Binding CharSpacing}" />
+                <TextBox x:Name="textBox" IsHitTestVisible="False" Margin="1.1,1.1,0,0"
+                         FontStretch="{Binding FontStretch}"
+				Style="{StaticResource AviaryTextToolTextBoxStyle}"
+                 Text="{Binding Text, Mode=TwoWay}"
+				Foreground="{Binding ForegroundBrush}"
+                MinHeight="{Binding MinHeight}"
+                MinWidth="{Binding MinWidth}"
+                  FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" CharacterSpacing="{Binding CharSpacing}" />
+            </Grid>
+        </Border>
+        <Grid x:Name="manipGrid"
+            Visibility="{Binding ManipulationGridVisibility}"
+            ManipulationMode="All"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            Background="{StaticResource AviaryAlmostTransparentBrush}"
+            Opacity="1"
+            RenderTransformOrigin="0.5,0.5">
+        </Grid>
+        <Grid
+              x:Name="dragImage"
+            Background="{Binding AviaryThemeColorBrush}"
+            Height="{Binding IconWidthAndHeight}"
+            Width="{Binding IconWidthAndHeight}"
+            RenderTransform="{Binding DragHandleTransform}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            RenderTransformOrigin="0.5,0.5">
+        <Image
+            Height="{Binding IconWidthAndHeight}"
+            Width="{Binding IconWidthAndHeight}"
+            Source="{Binding ExpandIcon}"
+            RenderTransformOrigin="0.5,0.5" />
+        </Grid>
+    </Grid>
+</UserControl>

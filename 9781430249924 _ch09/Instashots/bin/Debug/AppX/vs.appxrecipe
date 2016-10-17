@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FAMILYPC</Machine>
+    <WindowsUser>vinodh</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>50CB5A8DDB3B1E146553A7FC47A2C747AC1E7D565A13657BD190055E8C1B00CA</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>48644W3Force.Instashots_1.0.0.0_neutral__a9xqa58b13sdp</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>48644W3Force.Instashots_a9xqa58b13sdp!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>48644W3Force.Instashots</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=22D3D0C6-7BE0-4835-83B5-B3092E777832</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-05T04:45:49.900</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\Instashots.exe">
+      <PackagePath>Instashots.exe</PackagePath>
+      <Modified>2013-04-08T04:55:50.115</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\Instashots.pdb">
+      <PackagePath>Instashots.pdb</PackagePath>
+      <Modified>2013-04-08T04:55:50.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\References\CommonConfiguration\Neutral\Microsoft.Live.Controls.dll">
+      <PackagePath>Microsoft.Live.Controls.dll</PackagePath>
+      <Modified>2012-08-02T17:43:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\References\CommonConfiguration\Neutral\Microsoft.Live.dll">
+      <PackagePath>Microsoft.Live.dll</PackagePath>
+      <Modified>2012-08-02T17:43:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MobileServicesManagedClient\0.2.0.0\References\CommonConfiguration\neutral\Microsoft.WindowsAzure.MobileServices.Managed.dll">
+      <PackagePath>Microsoft.WindowsAzure.MobileServices.Managed.dll</PackagePath>
+      <Modified>2013-01-30T16:38:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Hotmail.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Hotmail.png</PackagePath>
+      <Modified>2012-05-17T18:26:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Hotmail_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Hotmail_black.png</PackagePath>
+      <Modified>2012-05-17T18:26:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Messenger.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Messenger.png</PackagePath>
+      <Modified>2012-05-17T18:26:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Messenger_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Messenger_black.png</PackagePath>
+      <Modified>2012-05-17T18:26:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\SkyDrive.png">
+      <PackagePath>Microsoft.Live.Controls\Images\SkyDrive.png</PackagePath>
+      <Modified>2012-05-17T18:26:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\SkyDrive_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\SkyDrive_black.png</PackagePath>
+      <Modified>2012-05-17T18:26:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Windows.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Windows.png</PackagePath>
+      <Modified>2012-05-17T18:26:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Live\v5.0\Metro XAML\Redist\CommonConfiguration\Neutral\Microsoft.Live.Controls\Images\Windows_black.png">
+      <PackagePath>Microsoft.Live.Controls\Images\Windows_black.png</PackagePath>
+      <Modified>2012-05-17T18:26:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-03-21T18:13:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-03-21T18:13:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-03-21T18:13:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-03-21T18:13:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-04-04T06:44:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\Common\QuickStartTask.xaml">
+      <PackagePath>Common\QuickStartTask.xaml</PackagePath>
+      <Modified>2013-04-04T06:44:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-04-04T06:44:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-04-08T03:53:38.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Book8\Code\9781430249924 _ch09\Instashots\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-04-05T04:45:49.796</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

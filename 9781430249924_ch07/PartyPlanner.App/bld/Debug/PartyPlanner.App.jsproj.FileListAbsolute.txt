@@ -1,0 +1,9 @@
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bin\Debug\resources.pri
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bin\Debug\AppxManifest.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bin\Debug\PartyPlanner.App.build.appxrecipe
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bld\Debug\priconfig.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bld\Debug\layout.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bld\Debug\resources.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bld\Debug\pri.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bld\Debug\LanguageQualifiers.txt
+D:\SkyDrive\Book8\Code\9781430249924 _ch07\PartyPlanner\PartyPlanner.App\bld\Debug\ProjectArchitectures.txt

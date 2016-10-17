@@ -1,0 +1,1785 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.Prism.StoreApps</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.AppManifestHelper">
+            <summary>
+            This helper class loads the AppManifest in memory, letting you obtain properties that are not exposed through the Windows Store API.
+            Currently, this class has methods for discovering if the Search contract is enabled and to get the Applications Id.
+            Nevertheless, you can extend it to get other values that you may need.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.AppManifestHelper.IsSearchDeclared">
+            <summary>
+            Checks if the Search declaration was activated in the Package.appxmanifest.
+            </summary>
+            <returns>True if Search is declared</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.AppManifestHelper.GetApplicationId">
+            <summary>
+            Retrieves the Application Id from the AppManifest.
+            </summary>
+            <returns>The Application Id</returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.BindableBase">
+            <summary>
+            Implementation of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> to simplify models.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Checks if a property already matches a desired value. Sets the property and
+            notifies listeners only when necessary.
+            </summary>
+            <typeparam name="T">Type of the property.</typeparam>
+            <param name="storage">Reference to a property with both getter and setter.</param>
+            <param name="value">Desired value for the property.</param>
+            <param name="propertyName">Name of the property used to notify listeners. This
+            value is optional and can be provided automatically when invoked from compilers that
+            support CallerMemberName.</param>
+            <returns>True if the value was changed, false if the existing value matched the
+            desired value.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableBase.OnPropertyChanged(System.String)">
+            <summary>
+            Notifies listeners that a property value has changed.
+            </summary>
+            <param name="propertyName">Name of the property used to notify listeners. This
+            value is optional and can be provided automatically when invoked from compilers
+            that support <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute"/>.</param>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.BindableBase.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.SettingsCharmActionItem">
+            <summary>
+            The SettingsCharmActionItem is used by the MvvmAppBase class to populate the SettingsPane.
+            To include custom items in the Settings pane, override the MvvmAppBase.GetSettingsCharmActionItems method.
+            This item type has an associated Action that will be executed when selecting it in the Settings pane.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SettingsCharmActionItem.#ctor(System.String,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SettingsCharmActionItem"/> class.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="action">The action to be performed when the Settings charm is selected.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.SettingsCharmActionItem.Id">
+            <summary>
+            Gets the id of the Settings charm Flyout item.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.SettingsCharmActionItem.Title">
+            <summary>
+            Gets the title of the Settings charm Flyout item.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.SettingsCharmActionItem.Action">
+            <summary>
+            Gets the Action that will be executed when this item is clicked in the Settings charm.
+            </summary>
+            <value>
+            The Action delegate to be executed.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1">
+            <summary>
+            An <see cref="T:System.Windows.Input.ICommand"/> whose delegates can be attached for <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.Execute(`0)"/> and <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.CanExecute(`0)"/>.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+            <remarks>
+            The constructor deliberately prevents the use of value types.
+            Because ICommand takes an object, having a value type for T would cause unexpected behavior when CanExecute(null) is called during XAML initialization for command bindings.
+            Using default(T) was considered and rejected as a solution because the implementor would not be able to distinguish between a valid and defaulted values.
+            <para/>
+            Instead, callers should support a value type by using a nullable value type and checking the HasValue property before using the Value property.
+            <example>
+                <code>
+            public MyClass()
+            {
+                this.submitCommand = new DelegateCommand&lt;int?&gt;(this.Submit, this.CanSubmit);
+            }
+            
+            private bool CanSubmit(int? customerId)
+            {
+                return (customerId.HasValue &amp;&amp; customers.Contains(customerId.Value));
+            }
+                </code>
+            </example>
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase">
+            <summary>
+            An <see cref="T:System.Windows.Input.ICommand"/> whose delegates can be attached for <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.Execute(System.Object)"/> and <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.CanExecute(System.Object)"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.#ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})">
+            <summary>
+            Creates a new instance of a <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase"/>, specifying both the execute action and the can execute function.
+            </summary>
+            <param name="executeMethod">The <see cref="T:System.Action"/> to execute when <see cref="M:System.Windows.Input.ICommand.Execute(System.Object)"/> is invoked.</param>
+            <param name="canExecuteMethod">The <see cref="T:System.Func`2"/> to invoked when <see cref="M:System.Windows.Input.ICommand.CanExecute(System.Object)"/> is invoked.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.#ctor(System.Func{System.Object,System.Threading.Tasks.Task},System.Func{System.Object,System.Boolean})">
+            <summary>
+            Creates a new instance of a <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase"/>, specifying both the Execute action as an awaitable Task and the CanExecute function.
+            </summary>
+            <param name="executeMethod">The <see cref="T:System.Func`2"/> to execute when <see cref="M:System.Windows.Input.ICommand.Execute(System.Object)"/> is invoked.</param>
+            <param name="canExecuteMethod">The <see cref="T:System.Func`2"/> to invoked when <see cref="M:System.Windows.Input.ICommand.CanExecute(System.Object)"/> is invoked.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.OnCanExecuteChanged">
+            <summary>
+            Raises <see cref="E:System.Windows.Input.ICommand.CanExecuteChanged"/> on the UI thread so every 
+            command invoker can requery <see cref="M:System.Windows.Input.ICommand.CanExecute(System.Object)"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.RaiseCanExecuteChanged">
+            <summary>
+            Raises <see cref="E:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.CanExecuteChanged"/> on the UI thread so every command invoker
+            can requery to check if the command can execute.
+            <remarks>Note that this will trigger the execution of <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.CanExecute(System.Object)"/> once for each invoker.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.Execute(System.Object)">
+            <summary>
+            Executes the command with the provided parameter by invoking the <see cref="T:System.Action`1"/> supplied during construction.
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.CanExecute(System.Object)">
+            <summary>
+            Determines if the command can execute with the provided parameter by invoking the <see cref="T:System.Func`2"/> supplied during construction.
+            </summary>
+            <param name="parameter">The parameter to use when determining if this command can execute.</param>
+            <returns>Returns <see langword="true"/> if the command can execute.  <see langword="False"/> otherwise.</returns>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase.CanExecuteChanged">
+            <summary>
+            Occurs when changes happen that affect whether or not the command should execute. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.#ctor(System.Action{`0})">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/>.
+            </summary>
+            <param name="executeMethod">Delegate to execute when Execute is called on the command. This can be null to just hook up a CanExecute delegate.</param>
+            <remarks><seealso cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.CanExecute(`0)"/> will always return true.</remarks>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.#ctor(System.Action{`0},System.Func{`0,System.Boolean})">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/>.
+            </summary>
+            <param name="executeMethod">Delegate to execute when Execute is called on the command. This can be null to just hook up a CanExecute delegate.</param>
+            <param name="canExecuteMethod">Delegate to execute when CanExecute is called on the command. This can be null.</param>
+            <exception cref="T:System.ArgumentNullException">When both <paramref name="executeMethod"/> and <paramref name="canExecuteMethod"/> ar <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.FromAsyncHandler(System.Func{`0,System.Threading.Tasks.Task})">
+            <summary>
+            Factory method to create a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/> from an awaitable handler method.
+            </summary>
+            <param name="executeMethod">Delegate to execute when Execute is called on the command.</param>
+            <returns>Constructed instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/></returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.FromAsyncHandler(System.Func{`0,System.Threading.Tasks.Task},System.Func{`0,System.Boolean})">
+            <summary>
+            Factory method to create a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/> from an awaitable handler method.
+            </summary>
+            <param name="executeMethod">Delegate to execute when Execute is called on the command. This can be null to just hook up a CanExecute delegate.</param>
+            <param name="canExecuteMethod">Delegate to execute when CanExecute is called on the command. This can be null.</param>
+            <returns>Constructed instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/></returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.CanExecute(`0)">
+            <summary>
+            Determines if the command can execute by invoked the <see cref="T:System.Func`2"/> provided during construction.
+            </summary>
+            <param name="parameter">Data used by the command to determine if it can execute.</param>
+            <returns>
+            <see langword="true"/> if this command can be executed; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1.Execute(`0)">
+            <summary>
+            Executes the command and invokes the <see cref="T:System.Action`1"/> provided during construction.
+            </summary>
+            <param name="parameter">Data used by the command.</param>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand">
+            <summary>
+            An <see cref="T:System.Windows.Input.ICommand"/> whose delegates do not take any parameters for <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.Execute"/> and <see cref="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.CanExecute"/>.
+            </summary>
+            <seealso cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommandBase"/>
+            <seealso cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand`1"/>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.#ctor(System.Action)">
+            <summary>
+            Creates a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand"/> with the <see cref="T:System.Action"/> to invoke on execution.
+            </summary>
+            <param name="executeMethod">The <see cref="T:System.Action"/> to invoke when <see cref="M:System.Windows.Input.ICommand.Execute(System.Object)"/> is called.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.#ctor(System.Action,System.Func{System.Boolean})">
+            <summary>
+            Creates a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand"/> with the <see cref="T:System.Action"/> to invoke on execution
+            and a <see langword="Func"/> to query for determining if the command can execute.
+            </summary>
+            <param name="executeMethod">The <see cref="T:System.Action"/> to invoke when <see cref="M:System.Windows.Input.ICommand.Execute(System.Object)"/> is called.</param>
+            <param name="canExecuteMethod">The <see cref="T:System.Func`1"/> to invoke when <see cref="M:System.Windows.Input.ICommand.CanExecute(System.Object)"/> is called</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.FromAsyncHandler(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Factory method to create a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand"/> from an awaitable handler method.
+            </summary>
+            <param name="executeMethod">Delegate to execute when Execute is called on the command.</param>
+            <returns>Constructed instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand"/></returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.FromAsyncHandler(System.Func{System.Threading.Tasks.Task},System.Func{System.Boolean})">
+            <summary>
+            Factory method to create a new instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand"/> from an awaitable handler method.
+            </summary>
+            <param name="executeMethod">Delegate to execute when Execute is called on the command. This can be null to just hook up a CanExecute delegate.</param>
+            <param name="canExecuteMethod">Delegate to execute when CanExecute is called on the command. This can be null.</param>
+            <returns>Constructed instance of <see cref="T:Microsoft.Practices.Prism.StoreApps.DelegateCommand"/></returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.Execute">
+            <summary>
+             Executes the command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.DelegateCommand.CanExecute">
+            <summary>
+            Determines if the command can be executed.
+            </summary>
+            <returns>Returns <see langword="true"/> if the command can execute, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.BindableValidator">
+            <summary>
+            The BindableValidator class run validation rules of an entity, and stores a collection of errors of the properties that did not pass validation.
+            The validation is run on each property change or whenever the ValidateProperties method is called.
+            It also provides an indexer property, that uses the property names as keys and return the error list for the specified property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.BindableValidator.EmptyErrorsCollection">
+            <summary>
+            Represents a collection of empty error values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.#ctor(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>
+            Initializes a new instance of the BindableValidator class with the entity to validate.
+            </summary>
+            <param name="entityToValidate">The entity to validate</param>
+            <exception cref="T:System.ArgumentNullException">When <paramref name="entityToValidate"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.GetAllErrors">
+            <summary>
+            Returns a new ReadOnlyDictionary containing all the errors of the Entity, separated by property.
+            </summary>
+            <returns>
+            A ReadOnlyDictionary that contains a KeyValuePair for each property with errors. 
+            Each KeyValuePair has a property name as the key, and the value is the collection of errors of that property.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.SetAllErrors(System.Collections.Generic.IDictionary{System.String,System.Collections.ObjectModel.ReadOnlyCollection{System.String}})">
+            <summary>
+            Updates the errors collection of the entity, notifying if the errors collection has changed.
+            </summary>
+            <param name="entityErrors">The collection of errors for the entity.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.ValidateProperty(System.String)">
+            <summary>
+            Validates the property, based on the rules set in the property ValidationAttributes attributes. 
+            It updates the errors collection with the new validation results (notifying if necessary). 
+            </summary>
+            <param name="propertyName">The name of the property to validate.</param>
+            <returns>True if the property is valid. Otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">When <paramref name="propertyName"/> is <see langword="null"/> or an empty string value.</exception>
+            <exception cref="T:System.ArgumentException">When the <paramref name="propertyName"/> parameter does not match any property name.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.ValidateProperties">
+            <summary>
+            Validates all the properties decorated with the ValidationAttribute attribute.
+            It updates each property errors collection with the new validation results (notifying if necessary). 
+            </summary>
+            <returns>True if the property is valid. Otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.TryValidateProperty(System.Reflection.PropertyInfo,System.Collections.Generic.List{System.String})">
+            <summary>
+            Performs a validation of a property, adding the results in the propertyErrors list. 
+            </summary>
+            <param name="propertyInfo">The PropertyInfo of the property to validate</param>
+            <param name="propertyErrors">A list containing the current error messages of the property.</param>
+            <returns>True if the property is valid. Otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.SetPropertyErrors(System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Updates the errors collection of the property.
+            </summary>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyNewErrors">The new collection of property errors.</param>
+            <returns>True if the property errors have changed. Otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.OnPropertyChanged(System.String)">
+            <summary>
+            Notifies listeners that a property value has changed.
+            </summary>
+            <param name="propertyName">Name of the property used to notify listeners.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.BindableValidator.OnErrorsChanged(System.String)">
+            <summary>
+            Notifies listeners that the errors of a property have changed.
+            </summary>
+            <param name="propertyName">Name of the property used to notify listeners.</param>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.BindableValidator.ErrorsChanged">
+            <summary>
+            Multicast event for errors change notifications.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.BindableValidator.PropertyChanged">
+            <summary>
+            Multicast event for property change notifications.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.BindableValidator.Item(System.String)">
+            <summary>
+            Returns the errors of the property.
+            </summary>
+            <param name="propertyName">The name of the property.</param>
+            <returns>The errors of the property, if it has errors. Otherwise, the BindableValidator.EmptyErrorsCollection.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.BindableValidator.Errors">
+            <summary>
+            Gets the list of errors per property.
+            </summary>
+            <value>
+            The dictionary of property names and errors collection pairs.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.BindableValidator.IsValidationEnabled">
+            <summary>
+            Returns true if the Validation functionality is enabled. Otherwise, false.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Constants">
+            <summary>
+            Internal class that contains the constants used by the Microsoft.Practices.Prism.StoreApps library.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.FlyoutService">
+            <summary>
+            The FlyoutService class is used for displaying Flyout views in your Windows Store app. This works for Flyout views that implement the FlyoutView base class.
+            The FlyoutService uses the FlyoutResolver Func to determine the Flyout that will be shown when the ShowFlyout method is called.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutService">
+            <summary>
+            The IFlyoutService interface should be used for implmenting the service used for displaying Flyout views in your Windows Store app.
+            This works for Flyout views that implement the FlyoutView base class.
+            The default implementation of IFlyoutService is the FlyoutService class, which uses the FlyoutResolver to determine the Flyout that will be shown
+            when the ShowFlyout method is called.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutService.ShowFlyout(System.String)">
+            <summary>
+            Shows the Flyout that has the passed Flyout Id.
+            </summary>
+            <param name="flyoutId">The Flyout id.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutService.ShowFlyout(System.String,System.Object,System.Action)">
+            <summary>
+            Shows the Flyout that has the passed Flyout Id and also allows it to pass a parameter and a success callback.
+            </summary>
+            <param name="flyoutId">The Flyout id.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="successAction">The success action.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutService.FlyoutResolver">
+            <summary>
+            Gets or sets the Flyout resolver that is used for retrieving the Flyouts based on a string id.
+            </summary>
+            <value>
+            The Flyout resolver.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.FlyoutService"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutService.ShowFlyout(System.String)">
+            <summary>
+            Shows the Flyout that has the passed Flyout Id.
+            </summary>
+            <param name="flyoutId">The Flyout id.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutService.ShowFlyout(System.String,System.Object,System.Action)">
+            <summary>
+            Shows the flyout that has the passed Flyout Id and also allows it to pass a parameter and a success callback.
+            </summary>
+            <param name="flyoutId">The Flyout id.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="successAction">The success action.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutService.Current_SizeChanged(System.Object,Windows.UI.Core.WindowSizeChangedEventArgs)">
+            <summary>
+            Handles the SizeChanged event of the current page, to show the Flyout once the page is unsnapped.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Windows.UI.Core.WindowSizeChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.FlyoutService.FlyoutResolver">
+            <summary>
+            Gets or sets the Flyout resolver that is used for retrieving the Flyouts based on a string id.
+            </summary>
+            <value>
+            The Flyout resolver.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.StandardFlyoutSize">
+            <summary>
+            Static class that contains the standard widths of Flyouts
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.StandardFlyoutSize.Narrow">
+            <summary>
+            Width of the narrow Flyout views.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.StandardFlyoutSize.Wide">
+            <summary>
+            Width of the wide Flyout views.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.FlyoutView">
+            <summary>
+            The FlyoutView base class can be used for views that are going to be displayed as Flyouts.
+            It contains methods to display the view inside a <see cref="T:Windows.UI.Xaml.Controls.Primitives.Popup"/> control, and also to close the popup, and handle the go back navigation.
+            Additionally, this class disables the ShowOnKeyboardInput behavior of the SearchPane if it is enabled, and restores it after the Flyout is closed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutView.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.FlyoutView"/> class.
+            </summary>
+            <param name="flyoutSize">The size of the Flyout.</param>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.FlyoutView.FlyoutSizeProperty">
+            <summary>
+            DependencyProperty for FlyoutSize.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutView.Open(System.Object,System.Action)">
+            <summary>
+            Called to present the Flyout view.
+            </summary>
+            <param name="parameter">Optional parameter for the caller to pass into the view.</param>
+            <param name="successAction">Method to be invoked on successful completion of the user task in the Flyout.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutView.Close">
+            <summary>
+            Closes the Flyout.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FlyoutView.GoBack">
+            <summary>
+            Handler for the GoBack button in the Flyout to go back to the settings Flyout if that is how the user arrived at this Flyout.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.FlyoutView.FlyoutSize">
+            <summary>
+            The width of the Flyout.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.FrameNavigationService">
+            <summary>
+            The FrameNavigationService interface is used for navigating across the pages of your Windows Store app.
+            The FrameNavigationService class, uses a class that implements the IFrameFacade interface to provide page navigation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService">
+            <summary>
+            The INavigationService interface is used for creating a navigation service for your Windows Store app.
+            The default implementation of INavigationService is the FrameNavigationService class, that uses a class that implements the IFrameFacade interface
+            to provide page navigation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService.Navigate(System.String,System.Object)">
+            <summary>
+            Navigates to the page with the specified page token, passing the specified parameter.
+            </summary>
+            <param name="pageToken">The page token.</param>
+            <param name="parameter">The parameter.</param>
+            <returns>Returns <c>true</c> if navigation succeeds; otherwise, <c>false</c></returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService.GoBack">
+            <summary>
+            Goes to the previous page in the navigation stack.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService.CanGoBack">
+            <summary>
+            Determines whether the navigation service can navigate to the previous page or not.
+            </summary>
+            <returns>
+              <c>true</c> if the navigation service can go back; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService.ClearHistory">
+            <summary>
+            Clears the navigation history.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService.RestoreSavedNavigation">
+            <summary>
+            Restores the saved navigation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationService.Suspending">
+            <summary>
+            Used for navigating away from the current view model due to a suspension event, in this way you can execute additional logic to handle suspensions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.#ctor(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.Func{System.String,System.Type},Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.FrameNavigationService"/> class.
+            </summary>
+            <param name="frame">The frame.</param>
+            <param name="navigationResolver">The navigation resolver.</param>
+            <param name="sessionStateService">The session state service.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.Navigate(System.String,System.Object)">
+            <summary>
+            Navigates to the page with the specified page token, passing the specified parameter.
+            </summary>
+            <param name="pageToken">The page token.</param>
+            <param name="parameter">The parameter.</param>
+            <returns>Returns <c>true</c> if the navigation succeeds: otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.GoBack">
+            <summary>
+            Goes to the previous page in the navigation stack.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.CanGoBack">
+            <summary>
+            Determines whether the navigation service can navigate to the previous page or not.
+            </summary>
+            <returns>
+              <c>true</c> if the navigation service can go back; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.ClearHistory">
+            <summary>
+            Clears the navigation history.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.RestoreSavedNavigation">
+            <summary>
+            Restores the saved navigation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.Suspending">
+            <summary>
+            Used for navigating away from the current view model due to a suspension event, in this way you can execute additional logic to handle suspensions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.NavigateToCurrentViewModel(Windows.UI.Xaml.Navigation.NavigationMode,System.Object)">
+            <summary>
+            This method is triggered after navigating to a view model. It is used to load the view model state that was saved previously.
+            </summary>
+            <param name="navigationMode">The navigation mode.</param>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.NavigateFromCurrentViewModel(System.Boolean)">
+            <summary>
+            Navigates away from the current viewmodel.
+            </summary>
+            <param name="suspending">True if it is navigating away from the viewmodel due to a suspend event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.frame_Navigating(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Navigating event of the Frame control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.frame_Navigated(System.Object,Microsoft.Practices.Prism.StoreApps.MvvmNavigatedEventArgs)">
+            <summary>
+            Handles the Navigated event of the Frame control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Microsoft.Practices.Prism.StoreApps.MvvmNavigatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameNavigationService.AreEquals(System.Object,System.Object)">
+            <summary>
+            Returns true if both objects are equal. Two objects are equal if they are null or the same string object.
+            </summary>
+            <param name="obj1">First object to compare.</param>
+            <param name="obj2">Second object to compare.</param>
+            <returns>Returns <c>true</c> if both parameters are equal; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter">
+            <summary>
+            Abstracts the Windows.UI.Xaml.Controls.Frame object for use by apps that derive from the MvvmAppBase class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade">
+            <summary>
+            The IFrameFacade interface abstracts the Windows.UI.Xaml.Controls.Frame object for use by apps that derive from the MvvmAppBase class. A Frame 
+            represents a content control that supports navigation. The default implementation of IFrameFacade is the FrameFacade class, which simply passes method 
+            invocations to an underlying Windows.UI.Xaml.Controls.Frame object. However, in addition to the FrameFacade class, test environments may implement 
+            this interface for the purposes of unit testing and integration testing. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.GoBack">
+            <summary>
+            Navigates to the most recent item in back navigation history, if a Frame manages its own navigation history.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.GetNavigationState">
+            <returns>
+            The string-form serialized navigation history. See Remarks.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.SetNavigationState(System.String)">
+            <summary>
+            Reads and restores the navigation history of a Frame from a provided serialization string.
+            </summary>
+            <param name="navigationState">The serialization string that supplies the restore point for navigation history.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.Navigate(System.Type,System.Object)">
+            <summary>
+            Navigates to a page of the requested type.
+            </summary>
+            <param name="sourcePageType">The type of the page that will be navigated to.</param>
+            <param name="parameter">The page's navigation parameter.</param>
+            
+            <returns>True if navigation was successful; false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.GetValue(Windows.UI.Xaml.DependencyProperty)">
+            <summary>
+            Returns the current effective value of a dependency property from a DependencyObject.
+            </summary>
+            
+            <returns>
+            Returns the current effective value.
+            </returns>
+            <param name="dependencyProperty">The DependencyProperty identifier of the property for which to retrieve the value.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.SetValue(Windows.UI.Xaml.DependencyProperty,System.Object)">
+            <summary>
+            Sets the local value of a dependency property on a DependencyObject.
+            </summary>
+            <param name="dependencyProperty">The identifier of the dependency property to set.</param><param name="value">The new local value.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.ClearValue(Windows.UI.Xaml.DependencyProperty)">
+            <summary>
+            Clears the local value of a dependency property.
+            </summary>
+            <param name="dependencyProperty">The DependencyProperty identifier of the property for which to clear the value.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.Content">
+            <summary>
+            Gets or sets the content of a ContentControl.
+            </summary>
+            
+            <returns>
+            An object that contains the control's content. The default is null.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.BackStackDepth">
+            <summary>
+            Gets the number of entries in the navigation back stack.
+            </summary>
+            
+            <returns>
+            The number of entries in the navigation back stack.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.CanGoBack">
+            <summary>
+            Gets a value that indicates whether there is at least one entry in back navigation history.
+            </summary>
+            
+            <returns>
+            True if there is at least one entry in back navigation history; false if there are no entries in back navigation history or the Frame does not own its own navigation history.
+            </returns>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.Navigated">
+            <summary>
+            Occurs when the content that is being navigated to has been found and is available from the Content property, although it may not have completed loading.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade.Navigating">
+            <summary>
+            Occurs when a new navigation is requested.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.#ctor(Windows.UI.Xaml.Controls.Frame)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter"/> class.
+            </summary>
+            <param name="frame">The Frame that will be wrapped.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.GoBack">
+            <summary>
+            Navigates to the most recent item in back navigation history, if a Frame manages its own navigation history.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.GetNavigationState">
+            <returns>
+            The string-form serialized navigation history. See Remarks.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.SetNavigationState(System.String)">
+            <summary>
+            Reads and restores the navigation history of a Frame from a provided serialization string.
+            </summary>
+            <param name="navigationState">The serialization string that supplies the restore point for navigation history.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.Navigate(System.Type,System.Object)">
+            <summary>
+            Navigates to a page of the requested type.
+            </summary>
+            <param name="sourcePageType">The type of the page that will be navigated to.</param>
+            <param name="parameter">The page's navigation parameter.</param>
+            
+            <returns>True if navigation was successful; false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.GetValue(Windows.UI.Xaml.DependencyProperty)">
+            <summary>
+            Returns the current effective value of a dependency property from a DependencyObject.
+            </summary>
+            
+            <returns>
+            Returns the current effective value.
+            </returns>
+            <param name="dependencyProperty">The DependencyProperty identifier of the property for which to retrieve the value.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.SetValue(Windows.UI.Xaml.DependencyProperty,System.Object)">
+            <summary>
+            Sets the local value of a dependency property on a DependencyObject.
+            </summary>
+            <param name="dependencyProperty">The identifier of the dependency property to set.</param><param name="value">The new local value.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.ClearValue(Windows.UI.Xaml.DependencyProperty)">
+            <summary>
+            Clears the local value of a dependency property.
+            </summary>
+            <param name="dependencyProperty">The DependencyProperty identifier of the property for which to clear the value.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.Content">
+            <summary>
+            Gets or sets the content of a ContentControl.
+            </summary>
+            
+            <returns>
+            An object that contains the control's content. The default is null.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.BackStackDepth">
+            <summary>
+            Gets the number of entries in the navigation back stack.
+            </summary>
+            
+            <returns>
+            The number of entries in the navigation back stack.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.CanGoBack">
+            <summary>
+            Gets a value that indicates whether there is at least one entry in back navigation history.
+            </summary>
+            
+            <returns>
+            True if there is at least one entry in back navigation history; false if there are no entries in back navigation history or the Frame does not own its own navigation history.
+            </returns>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.Navigated">
+            <summary>
+            Occurs when the content that is being navigated to has been found and is available from the Content property, although it may not have completed loading.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.FrameFacadeAdapter.Navigating">
+            <summary>
+            Occurs when a new navigation is requested.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService">
+            <summary>
+            The ISessionStateService interface will be implemented by a class that handles the application's state saving and retrieving. The default implementation of ISessionStateService
+            is the SessionStateService class, which captures global session state to simplify process lifetime management for an application.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RegisterKnownType(System.Type)">
+            <summary>
+            Adds a type to the list of custom types provided to the <see cref="T:System.Runtime.Serialization.DataContractSerializer"/> when
+            reading and writing session state. The known type empty, additional types may be added to customize the serialization process.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SaveAsync">
+            <summary>
+            Save the current <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/>.  Any <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instances
+            registered with <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/> will also preserve their current
+            navigation stack, which in turn gives their active <see cref="T:Windows.UI.Xaml.Controls.Page"/> an opportunity
+            to save its state.
+            </summary>
+            <returns>An asynchronous task that reflects when session state has been saved.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RestoreSessionStateAsync">
+            <summary>
+            Restores previously saved <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/>.
+            </summary>
+            <returns>An asynchronous task that reflects when session state has been read. The
+            content of <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/> should not be relied upon until this task
+            completes.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RestoreFrameState">
+            <summary>
+            Any <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instances registered with <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/> will 
+            restore their prior navigation state, which in turn gives their active <see cref="T:Windows.UI.Xaml.Controls.Page"/> 
+            an opportunity restore its state.
+            
+            This method requires that RestoreSessionStateAsync be called prior to this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)">
+            <summary>
+            Registers a <see cref="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade"/> instance to allow its navigation history to be saved to
+            and restored from <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/>.  Frames should be registered once
+            immediately after creation if they will participate in session state management. Upon
+            registration if state has already been restored for the specified key
+            the navigation history will immediately be restored. Subsequent invocations of
+            <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RestoreFrameState"/> will also restore navigation history.
+            </summary>
+            <param name="frame">An instance whose navigation history should be managed by
+            <see cref="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException"/></param>
+            <param name="sessionStateKey">A unique key into <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/> used to
+            store navigation-related information.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.UnregisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade)">
+            <summary>
+            Disassociates a <see cref="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade"/> previously registered by <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/>
+            from <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/>. Any navigation state previously captured will be
+            removed.
+            </summary>
+            <param name="frame">An instance whose navigation history should no longer be managed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.GetSessionStateForFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade)">
+            <summary>
+            Provides storage for session state associated with the specified <see cref="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade"/>.
+            Frames that have been previously registered with <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/> have
+            their session state saved and restored automatically as a part of the global
+            <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/>. Frames that are not registered have transient state
+            that can still be useful when restoring pages that have been discarded from the
+            navigation cache.
+            </summary>
+            <remarks>Apps may choose to rely on <see cref="T:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage"/> to manage
+            page-specific state instead of working with Frame session state directly.</remarks>
+            <param name="frame">The instance for which session state is desired.</param>
+            <returns>A collection of state subject to the same serialization mechanism as
+            <see cref="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState"/>.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SessionState">
+            <summary>
+            Provides access to global session state for the current session. This state is
+            serialized by <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.SaveAsync"/> and restored by
+            <see cref="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService.RestoreSessionStateAsync"/>, so values must be serializable by
+            <see cref="T:System.Runtime.Serialization.DataContractSerializer"/> and should be as compact as possible. Strings
+            and other self-contained data types are strongly recommended.
+            </summary>
+            <value>
+            The global session state.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.ICredentialStore">
+            <summary>
+            The ICredentialStore interface abstracts the Windows.Security.Credentials.PasswordVault object for managing the users credentials of your application.
+            A PasswordVault represents a Credential Locker. The default implementation of ICredentialStore
+            is the RoamingCredentialStore class, which uses the Windows.Security.Credentials.PasswordVault object to get, save, and remove the application credentials.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ICredentialStore.SaveCredentials(System.String,System.String,System.String)">
+            <summary>
+            Saves the credentials in the password vault, for the specified resource.
+            </summary>
+            <param name="resource">The resource for which the credentials will be stored. For example, the application Name.</param>
+            <param name="userName">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ICredentialStore.GetSavedCredentials(System.String)">
+            <summary>
+            Gets the saved credentials for the specified resource.
+            </summary>
+            <param name="resource">The resource name of the credentials that will be stored.</param>
+            <returns>The <see cref="T:Windows.Security.Credentials.PasswordCredential"/> instance containing all the saved credentials for the specified resource.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ICredentialStore.RemoveSavedCredentials(System.String)">
+            <summary>
+            Removes the specified saved credentials.
+            </summary>
+            <param name="resource">The name of the resource that will have its credential removed.</param>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutViewModel">
+            <summary>
+            The IFlyoutViewModel interface should be implemented by the Flyout view model classes, to provide actions used for opening the Flyout, closing it,
+            and handling the back button clicks. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutViewModel.Open(System.Object,System.Action)">
+            <summary>
+            Opens the Flyout using the specified parameter, and executes the success Action after the Flyout is opened.
+            </summary>
+            <param name="parameter">The parameter.</param>
+            <param name="successAction">The success action.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutViewModel.GoBack">
+            <summary>
+            Gets or sets the action used to go back to the previous view.
+            </summary>
+            <value>
+            The go back action.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IFlyoutViewModel.CloseFlyout">
+            <summary>
+            Gets or sets the action used to close the Flyout.
+            </summary>
+            <value>
+            The action that will be executed to close the Flyout.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationAware">
+            <summary>
+            The INavigationAware interface should be used for view models that require persisting and loading state due to suspend/resume events.
+            The Microsoft.Practices.Prism.StoreApps.ViewModel base class implements this interface, therefore every view model that inherits from it
+            will support the navigation aware methods. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationAware.OnNavigatedTo(System.Object,Windows.UI.Xaml.Navigation.NavigationMode,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Called when navigation is performed to a page. You can use this method to load state if it is available.
+            </summary>
+            <param name="navigationParameter">The navigation parameter.</param>
+            <param name="navigationMode">The navigation mode.</param>
+            <param name="viewModelState">The state of the view model.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.INavigationAware.OnNavigatedFrom(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            This method will be called when navigating away from a page. You can use this method to save your view model data in case of a suspension event.
+            </summary>
+            <param name="viewModelState">The state of the view model.</param>
+            <param name="suspending">If set to <c>true</c> you are navigating away from this view model due to a suspension event.</param>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IResourceLoader">
+            <summary>
+            The IResourceLoader interface abstracts the Windows.ApplicationModel.Resources.ResourceLoader object for use by apps that derive from the MvvmAppBase class.
+            A ResourceLoader represents a class that reads the assembly resource file and looks for a named resource. The default implementation of IResourceLoader
+            is the ResourceLoaderAdapter class, which simply passes method invocations to an underlying Windows.ApplicationModel.Resources.ResourceLoader object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IResourceLoader.GetString(System.String)">
+            <summary>
+            Gets the value of the named resource.
+            </summary>
+            <param name="resource">The resource name.</param>
+            <returns>The named resource value.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.ISearchPaneService">
+            <summary>
+            The ISearchPaneService interface abstracts the Windows.ApplicationModel.Search.SearchPane object for use by apps that derive from the MvvmAppBase class.
+            The SearchPane class represents and manages the search pane that opens when a user activates the Search charm.
+            The default implementation of ISearchPaneService is the SearchPaneService class, which simply passes method invocations to an underlying
+            Windows.ApplicationModel.Search.SearchPane object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISearchPaneService.Show">
+            <summary>
+            Shows the Search pane.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISearchPaneService.ShowOnKeyboardInput(System.Boolean)">
+            <summary>
+            Enables or disables the ability to show the Search pane when a keyboard input is detected.
+            </summary>
+            <param name="enable">if set to <c>true</c> it will show the Search pane when a keyboard input is detected.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.ISearchPaneService.IsShowOnKeyboardInputEnabled">
+            <summary>
+            Determines if the Show On Keyboard Input feature is enabled or not.
+            </summary>
+            <returns>
+              <c>true</c> if the Show On Keyboard Input feature is enabled; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments">
+            <summary>
+            The SearchQueryArguments class unifies the SearchActivatedEventArgs and the SearchPaneQuerySubmittedEventArgs event args classes, as they do not have a common interface.
+            This class is used to provide a single search method that will be wired to both search entry points (When the app is running, and when it is not).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments.#ctor(Windows.ApplicationModel.Activation.ISearchActivatedEventArgs)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments"/> class using an instance that implements the ISearchActivatedEventArgs interface.
+            </summary>
+            <param name="args">The <see cref="T:Windows.ApplicationModel.Activation.ISearchActivatedEventArgs"/> instance containing the event data, that will be used for initializing the SearchQueryArgument instance.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments.#ctor(Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments"/> class.
+            </summary>
+            <param name="args">The <see cref="T:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs"/> instance containing the event data, that will be used for initializing the SearchQueryArgument instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments.Language">
+            <summary>
+            Gets or sets the language of the query text.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.SearchQueryArguments.QueryText">
+            <summary>
+            Gets or sets the query text.
+            </summary>
+            <value>
+            The query text.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase">
+            <summary>
+            The IValidatableBindableBase interface was created to add validation support for model classes that contain validation rules.
+            The default implementation of IValidatableBindableBase is the ValidatableBindableBase class, which contains the logic to run the validation rules of the
+            instance of a model class and return the results of this validation as a list of properties' errors.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase.GetAllErrors">
+            <summary>
+            Gets all errors.
+            </summary>
+            <returns> A ReadOnlyDictionary that's key is a property name and the value is a ReadOnlyCollection of the error strings.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase.ValidateProperties">
+            <summary>
+            Validates the properties of the current instance.
+            </summary>
+            <returns>Returns <c>true</c> if all properties pass the validation rules; otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase.SetAllErrors(System.Collections.Generic.IDictionary{System.String,System.Collections.ObjectModel.ReadOnlyCollection{System.String}})">
+            <summary>
+            Sets the error collection of this instance.
+            </summary>
+            <param name="entityErrors">The entity errors.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase.IsValidationEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is validation enabled.
+            </summary>
+            <value>
+            <c>true</c> if validation is enabled for this instance; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase.Errors">
+            <summary>
+            Returns the BindableValidator instance that has an indexer property.
+            </summary>
+            <value>
+            The Bindable Validator Indexer property.
+            </value>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.Interfaces.IValidatableBindableBase.ErrorsChanged">
+            <summary>
+            Occurs when the Errors collection changed because new errors were added or old errors were fixed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.MvvmNavigatedEventArgs">
+            <summary>
+            Provides data for navigation methods and event handlers that cannot cancel the navigation request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.MvvmNavigatedEventArgs.NavigationMode">
+            <summary>
+            Gets a value that indicates the direction of movement during navigation.
+            </summary>
+            
+            <returns>
+            A value of the enumeration.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.MvvmNavigatedEventArgs.Parameter">
+            <summary>
+            Gets any Parameter object passed to the target page for the navigation.
+            </summary>
+            
+            <returns>
+            An object that potentially passes parameters to the navigation target. May be null.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.MvvmAppBase">
+            <summary>
+            Provides MvvmAppBase-specific behavior to supplement the default Application class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.#ctor">
+            <summary>
+            Initializes the singleton application object. This is the first line of authored code
+            executed, and as such is the logical equivalent of main() or WinMain().
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnLaunchApplication(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)">
+            <summary>
+            Override this method with logic that will be performed after the application is initialized. For example, navigating to the application's home page.
+            </summary>
+            <param name="args">The <see cref="T:Windows.ApplicationModel.Activation.LaunchActivatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnSearchApplication(Microsoft.Practices.Prism.StoreApps.SearchQueryArguments)">
+            <summary>
+            Called when any of the search entry points are triggered. You do not need to override this method if your application does not implement the Search contract.
+            </summary>
+            <param name="args">The search query arguments.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.GetPageType(System.String)">
+            <summary>
+            Gets the type of the page based on a page token.
+            </summary>
+            <param name="pageToken">The page token.</param>
+            <returns>The type of the page which corresponds to the specified token.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnRegisterKnownTypesForSerialization">
+            <summary>
+            Used for setting up the list of known types for the SessionStateService, using the RegisterKnownType method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnInitialize(Windows.ApplicationModel.Activation.IActivatedEventArgs)">
+            <summary>
+            Override this method with the initialization logic of your application. Here you can initialize services, repositories, and so on.
+            </summary>
+            <param name="args">The <see cref="T:Windows.ApplicationModel.Activation.IActivatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.CreateFlyoutView(System.String)">
+            <summary>
+            Creates the Flyout view.
+            </summary>
+            <param name="flyoutName">Name of the Flyout.</param>
+            <returns>The specified Flyout view</returns>
+            <exception cref="T:System.InvalidOperationException">Could not find associated Flyout in the Views folder.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.GetSettingsCharmActionItems">
+            <summary>
+            Gets the Settings charm action items.
+            </summary>
+            <returns>The list of Setting charm action items that will populate the Settings pane.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.Resolve(System.Type)">
+            <summary>
+            Resolves the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>A concrete instance of the specified type.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnLaunched(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)">
+            <summary>
+            Invoked when the application is launched normally by the end user. Other entry points
+            will be used when the application is launched to open a specific file, to display
+            search results, and so forth.
+            </summary>
+            <param name="args">Details about the launch request and process.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnWindowCreated(Windows.UI.Xaml.WindowCreatedEventArgs)">
+            <summary>
+            Raises the WindowCreated event.
+            </summary>
+            <param name="args">The <see cref="T:Windows.UI.Xaml.WindowCreatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnSearchActivated(Windows.ApplicationModel.Activation.SearchActivatedEventArgs)">
+            <summary>
+            Invoked when the application is activated through a search association.
+            </summary>
+            <param name="args">Event data for the event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.InitializeFrameAsync(Windows.ApplicationModel.Activation.IActivatedEventArgs)">
+            <summary>
+            Initializes the Frame and its content.
+            </summary>
+            <param name="args">The <see cref="T:Windows.ApplicationModel.Activation.IActivatedEventArgs"/> instance containing the event data.</param>
+            <returns>A task of a Frame that holds the app content.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.CreateNavigationService(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,Microsoft.Practices.Prism.StoreApps.Interfaces.ISessionStateService)">
+            <summary>
+            Creates the navigation service.
+            </summary>
+            <param name="rootFrame">The root frame.</param>
+            <param name="sessionStateService">The session state service.</param>
+            <returns>The initialized navigation service.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnSuspending(System.Object,Windows.ApplicationModel.SuspendingEventArgs)">
+            <summary>
+            Invoked when application execution is being suspended. Application state is saved
+            without knowing whether the application will be terminated or resumed with the contents
+            of memory still intact.
+            </summary>
+            <param name="sender">The source of the suspend request.</param>
+            <param name="e">Details about the suspend request.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnQuerySubmitted(Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs)">
+            <summary>
+            Called when a search is performed when the application is running.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.OnCommandsRequested(Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs)">
+            <summary>
+            Called when the Settings charm is invoked, this handler populates the Settings charm with the charm items returned by the GetSettingsCharmActionItems function.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.SessionStateService">
+            <summary>
+            Gets or sets the session state service.
+            </summary>
+            <value>
+            The session state service.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.NavigationService">
+            <summary>
+            Gets or sets the navigation service.
+            </summary>
+            <value>
+            The navigation service.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.FlyoutService">
+            <summary>
+            Gets or sets the Flyout service.
+            </summary>
+            <value>
+            The Flyout service.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.MvvmAppBase.IsSuspending">
+            <summary>
+            Gets a value indicating whether the application is suspending.
+            </summary>
+            <value>
+            <c>true</c> if the application is suspending; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.ResourceLoaderAdapter">
+            <summary>
+            The ResourceLoader class abstracts the Windows.ApplicationModel.Resources.ResourceLoader object for use by apps that derive from the MvvmAppBase class.
+            A ResourceLoader represents a class that reads the assembly resource file and looks for a named resource.
+            This class simply passes method invocations to an underlying Windows.ApplicationModel.Resources.ResourceLoader object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ResourceLoaderAdapter.#ctor(Windows.ApplicationModel.Resources.ResourceLoader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.ResourceLoaderAdapter"/> class.
+            </summary>
+            <param name="resourceLoader">The resource loader.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ResourceLoaderAdapter.GetString(System.String)">
+            <summary>
+            Gets the value of the named resource.
+            </summary>
+            <param name="resource">The resource name.</param>
+            <returns>
+            The named resource value.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.SearchPaneService">
+            <summary>
+            The SearchPaneService class abstracts Windows.ApplicationModel.Search.SearchPane object for use by apps that derive from the MvvmAppBase class.
+            The SearchPane class represents and manages the Search pane that opens when a user activates the Search charm.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SearchPaneService.Show">
+            <summary>
+            Shows the Search pane.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SearchPaneService.ShowOnKeyboardInput(System.Boolean)">
+            <summary>
+            Enables or disables the ability to show the Search pane when a keyboard input is detected.
+            </summary>
+            <param name="enable">If set to <c>true</c> it will show the Search pane when a keyboard input is detected.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SearchPaneService.IsShowOnKeyboardInputEnabled">
+            <summary>
+            Determines if the Show On Keyboard Input feature is enabled or not.
+            </summary>
+            <returns>
+            <c>true</c> if the Show On Keyboard Input feature is enabled; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.SessionStateService">
+            <summary>
+            SessionStateService captures global session state to simplify process lifetime management
+            for an application. Note that session state will be automatically cleared under a variety
+            of conditions and should only be used to store information that would be convenient to
+            carry across sessions, but that should be discarded when an application crashes or is
+            upgraded.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RegisterKnownType(System.Type)">
+            <summary>
+            Adds a type to the list of custom types provided to the <see cref="T:System.Runtime.Serialization.DataContractSerializer"/> when
+            reading and writing session state. Initially empty, additional types may be
+            added to customize the serialization process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.SaveAsync">
+            <summary>
+            Save the current <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>. Any <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instances
+            registered with <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/> will also preserve their current
+            navigation stack, which in turn gives their active <see cref="T:Windows.UI.Xaml.Controls.Page"/> an opportunity
+            to save its state.
+            </summary>
+            <returns>An asynchronous task that reflects when session state has been saved.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RestoreSessionStateAsync">
+            <summary>
+            Restores previously saved <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>.
+            </summary>
+            <returns>An asynchronous task that reflects when session state has been read. The
+            content of <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/> should not be relied upon until this task
+            completes.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RestoreFrameState">
+            <summary>
+            Any <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instances registered with <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/> will 
+            restore their prior navigation state, which in turn gives their active <see cref="T:Windows.UI.Xaml.Controls.Page"/> 
+            an opportunity restore its state.
+            
+            This method requires that RestoreSessionStateAsync be called prior to this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)">
+            <summary>
+            Registers a <see cref="T:Windows.UI.Xaml.Controls.Frame"/> instance to allow its navigation history to be saved to
+            and restored from <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>. Frames should be registered once
+            immediately after creation if they will participate in session state management. Upon
+            registration, if state has already been restored for the specified key,
+            the navigation history will immediately be restored. Subsequent invocations of
+            <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RestoreFrameState"/> will also restore navigation history.
+            </summary>
+            <param name="frame">An instance whose navigation history should be managed by
+            <see cref="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException"/></param>
+            <param name="sessionStateKey">A unique key into <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/> used to
+            store navigation-related information.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.UnregisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade)">
+            <summary>
+            Disassociates a <see cref="T:Windows.UI.Xaml.Controls.Frame"/> previously registered by <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/>
+            from <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>. Any navigation state previously captured will be
+            removed.
+            </summary>
+            <param name="frame">An instance whose navigation history should no longer be
+            managed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.GetSessionStateForFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade)">
+            <summary>
+            Provides storage for session state associated with the specified <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            Frames that have been previously registered with <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RegisterFrame(Microsoft.Practices.Prism.StoreApps.Interfaces.IFrameFacade,System.String)"/> have
+            their session state saved and restored automatically as a part of the global
+            <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>. Frames that are not registered have transient state
+            that can still be useful when restoring pages that have been discarded from the
+            navigation cache.
+            </summary>
+            <remarks>Apps may choose to rely on <see cref="T:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage"/> to manage
+            page-specific state instead of working with Frame session state directly.</remarks>
+            <param name="frame">The instance for which session state is desired.</param>
+            <returns>A collection of state, subject to the same serialization mechanism as
+            <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState">
+            <summary>
+            Provides access to global session state for the current session. This state is
+            serialized by <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.SaveAsync"/> and restored by
+            <see cref="M:Microsoft.Practices.Prism.StoreApps.SessionStateService.RestoreSessionStateAsync"/>, so values must be serializable by
+            <see cref="T:System.Runtime.Serialization.DataContractSerializer"/> and should be as compact as possible. Strings
+            and other self-contained data types are strongly recommended.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException">
+            <summary>
+            The exception that is thrown when a session state service error is detected.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException"/> class.
+            </summary>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.SessionStateServiceException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The inner exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase">
+            <summary>
+            The IValidatableBindableBase interface was created to add validation support for model classes that contain validation rules.
+            The default implementation of IValidatableBindableBase is the ValidatableBindableBase class, which contains the logic to run the validation rules of the
+            instance of a model class and return the results of this validation as a list of properties' errors.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.GetAllErrors">
+            <summary>
+            Gets all errors.
+            </summary>
+            <returns> A ReadOnlyDictionary that's key is a property name and the value is a ReadOnlyCollection of the error strings.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.ValidateProperties">
+            <summary>
+            Validates the properties of the current instance.
+            </summary>
+            <returns>
+            Returns <c>true</c> if all properties pass the validation rules; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.SetAllErrors(System.Collections.Generic.IDictionary{System.String,System.Collections.ObjectModel.ReadOnlyCollection{System.String}})">
+            <summary>
+            Sets the error collection of this instance.
+            </summary>
+            <param name="entityErrors">The entity errors.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Checks if a property already matches a desired value. Sets the property and
+            notifies listeners only when necessary. We are overriding this property to ensure that the SetProperty and the ValidateProperty methods are fired in a
+            deterministic way.
+            </summary>
+            <typeparam name="T">Type of the property.</typeparam>
+            <param name="storage">Reference to a property with both getter and setter.</param>
+            <param name="value">Desired value for the property.</param>
+            <param name="propertyName">Name of the property used to notify listeners. This
+            value is optional and can be provided automatically when invoked from compilers that
+            support CallerMemberName.</param>
+            <returns>
+            True if the value was changed, false if the existing value matched the
+            desired value.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.IsValidationEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is validation enabled.
+            </summary>
+            <value>
+            <c>true</c> if validation is enabled for this instance; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.Errors">
+            <summary>
+            Returns the BindableValidator instance that has an indexer property.
+            </summary>
+            <value>
+            The Bindable Validator Indexer property.
+            </value>
+        </member>
+        <member name="E:Microsoft.Practices.Prism.StoreApps.ValidatableBindableBase.ErrorsChanged">
+            <summary>
+            Occurs when the Errors collection changed because new errors were added or old errors were fixed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage">
+            <summary>
+            This is the base class that can be used for pages that need to be aware of layout changes and update the visual state accordingly.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.GoHome(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler to navigate backward in the page's associated
+            <see cref="T:Windows.UI.Xaml.Controls.Frame"/> until it reaches the top of the navigation stack.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="eventArgs">Event data describing the conditions that led to the event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.GoBack(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler to navigate backward in the navigation stack
+            associated with this page's <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="eventArgs">Event data describing the conditions that led to the
+            event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.GoForward(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler to navigate forward in the navigation stack
+            associated with this page's <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="eventArgs">Event data describing the conditions that led to the
+            event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.CoreDispatcher_AcceleratorKeyActivated(Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs)">
+            <summary>
+            Invoked on every keystroke, including system keys such as Alt key combinations, when
+            this page is active and occupies the entire window. Used to detect keyboard navigation
+            between pages even when the page itself doesn't have focus.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="args">Event data describing the conditions that led to the event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.CoreWindow_PointerPressed(Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs)">
+            <summary>
+            Invoked on every mouse click, touch screen tap, or equivalent interaction when this
+            page is active and occupies the entire window. Used to detect browser-style next and
+            previous mouse button clicks to navigate between pages.
+            </summary>
+            <param name="sender">Instance that triggered the event.</param>
+            <param name="args">Event data describing the conditions that led to the event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.StartLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler, typically on the <see cref="E:Windows.UI.Xaml.FrameworkElement.Loaded"/>
+            event of a <see cref="T:Windows.UI.Xaml.Controls.Control"/> within the page, to indicate that the sender should
+            start receiving visual state management changes that correspond to application view
+            state changes.
+            </summary>
+            <param name="sender">Instance of <see cref="T:Windows.UI.Xaml.Controls.Control"/> that supports visual state
+            management corresponding to view states.</param>
+            <param name="eventArgs">Event data that describes how the request was made.</param>
+            <remarks>The current view state will immediately be used to set the corresponding
+            visual state when layout updates are requested. A corresponding
+            <see cref="E:Windows.UI.Xaml.FrameworkElement.Unloaded"/> event handler connected to
+            <see cref="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.StopLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)"/> is strongly encouraged. Instances of
+            <see cref="T:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage"/> automatically invoke these handlers in their Loaded and
+            Unloaded events.</remarks>
+            <seealso cref="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.DetermineVisualState(Windows.UI.ViewManagement.ApplicationViewState)"/>
+            <seealso cref="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.InvalidateVisualState"/>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.StopLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Invoked as an event handler, typically on the <see cref="E:Windows.UI.Xaml.FrameworkElement.Unloaded"/>
+            event of a <see cref="T:Windows.UI.Xaml.Controls.Control"/>, to indicate that the sender should start receiving
+            visual state management changes that correspond to application view state changes.
+            </summary>
+            <param name="sender">Instance of <see cref="T:Windows.UI.Xaml.Controls.Control"/> that supports visual state
+            management corresponding to view states.</param>
+            <param name="eventArgs">Event data that describes how the request was made.</param>
+            <remarks>The current view state will immediately be used to set the corresponding
+            visual state when layout updates are requested.</remarks>
+            <seealso cref="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.StartLayoutUpdates(System.Object,Windows.UI.Xaml.RoutedEventArgs)"/>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.DetermineVisualState(Windows.UI.ViewManagement.ApplicationViewState)">
+            <summary>
+            Translates <see cref="T:Windows.UI.ViewManagement.ApplicationViewState"/> values into strings for visual state
+            management within the page. The default implementation uses the names of enum values.
+            Subclasses may override this method to control the mapping scheme used.
+            </summary>
+            <param name="viewState">View state for which a visual state is desired.</param>
+            <returns>Visual state name used to drive the
+            <see cref="T:Windows.UI.Xaml.VisualStateManager"/></returns>
+            <seealso cref="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.InvalidateVisualState"/>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.InvalidateVisualState">
+            <summary>
+            Updates all controls that are listening for visual state changes with the correct
+            visual state.
+            </summary>
+            <remarks>
+            Typically used in conjunction with overriding <see cref="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.DetermineVisualState(Windows.UI.ViewManagement.ApplicationViewState)"/> to
+            signal that a different value may be returned even though the view state has not
+            changed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached. The Parameter
+            property provides the group to be displayed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.OnNavigatedFrom(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page will no longer be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached. The Parameter
+            property provides the group to be displayed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.LoadState(System.Object,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Populates the page with content passed during navigation. Any saved state is also
+            provided when recreating a page from a prior session.
+            </summary>
+            <param name="navigationParameter">The parameter value passed to
+            <see cref="M:Windows.UI.Xaml.Controls.Frame.Navigate(System.Type,System.Object)"/> when this page was initially requested.
+            </param>
+            <param name="pageState">A dictionary of state preserved by this page during an earlier
+            session. This will be null the first time a page is visited.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.SaveState(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Preserves state associated with this page in case the application is suspended or the
+            page is discarded from the navigation cache. Values must conform to the serialization
+            requirements of <see cref="P:Microsoft.Practices.Prism.StoreApps.SessionStateService.SessionState"/>.
+            </summary>
+            <param name="pageState">An empty dictionary to be populated with serializable state.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Prism.StoreApps.VisualStateAwarePage.GetSessionStateForFrame">
+            <summary>
+            Gets or sets the get session state for Frame.
+            </summary>
+            <value>
+            The session state for the Frame.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.RestorableStateAttribute">
+            <summary>
+            This attribute indicates that the marked property will have its state saved on suspension.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.ViewModel">
+            <summary>
+            This is the view model base class that includes INotifyPropertyChange support and is aware of navigation events.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModel.OnNavigatedTo(System.Object,Windows.UI.Xaml.Navigation.NavigationMode,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Called when navigation is performed to a page. You can use this method to load state if it is available.
+            </summary>
+            <param name="navigationParameter">The navigation parameter.</param>
+            <param name="navigationMode">The navigation mode.</param>
+            <param name="viewModelState">The state of the view model.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModel.OnNavigatedFrom(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            This method will be called when navigating away from a page. You can use this method to save your view model data in case of a suspension event.
+            </summary>
+            <param name="viewModelState">The state of the view model.</param>
+            <param name="suspending">if set to <c>true</c> you are navigating away from this viewmodel due to a suspension event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModel.RetrieveEntityStateValue``1(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Retrieves the entity state value of the specified entity state key.
+            </summary>
+            <typeparam name="T">Type of the expected return value</typeparam>
+            <param name="entityStateKey">The entity state key.</param>
+            <param name="viewModelState">State of the view model.</param>
+            <returns>The T type object that represents the state value of the specified entity.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModel.AddEntityStateValue(System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Adds an entity state value to the view model state dictionary.
+            </summary>
+            <param name="viewModelStateKey">The view model state key.</param>
+            <param name="viewModelStateValue">The view model state value.</param>
+            <param name="viewModelState">The view model state dictionary.</param>
+        </member>
+        <member name="T:Microsoft.Practices.Prism.StoreApps.ViewModelLocator">
+            <summary>
+            The ViewModelLocator class locates the view model for the view that has the AutoWireViewModelChanged attached property set to true.
+            The view model will be located and injected into the view's DataContext. To locate the view, two strategies are used: First the ViewModelLocator
+            will look to see if there is a view model factory registered for that view, if not it will try to infer the view model using a convention based approach.
+            This class also provide methods for registering the view model factories,
+            and also to override the default view model factory and the default view type to view model type resolver.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.factories">
+            <summary>
+            A dictionary that contains all the registered factories for the views.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.defaultViewModelFactory">
+            <summary>
+            The default view model factory.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.defaultViewTypeToViewModelTypeResolver">
+            <summary>
+            Default view type to view model type resolver, assumes the view model is in same assembly as the view type, but in the "ViewModels" namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.SetDefaultViewModelFactory(System.Func{System.Type,System.Object})">
+            <summary>
+            Sets the default view model factory.
+            </summary>
+            <param name="viewModelFactory">The view model factory.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.SetDefaultViewTypeToViewModelTypeResolver(System.Func{System.Type,System.Type})">
+            <summary>
+            Sets the default view type to view model type resolver.
+            </summary>
+            <param name="viewTypeToViewModelTypeResolver">The view type to view model type resolver.</param>
+        </member>
+        <member name="F:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.AutoWireViewModelProperty">
+            <summary>
+            The AutoWireViewModel attached property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.GetAutoWireViewModel(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets the value of the AutoWireViewModel attached property.
+            </summary>
+            <param name="obj">The dependency object that has this attached property.</param>
+            <returns><c>True</c> if view model autowiring is enabled; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.SetAutoWireViewModel(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the value of the AutoWireViewModel attached property.
+            </summary>
+            <param name="obj">The dependency object that has this attached property.</param>
+            <param name="value">if set to <c>true</c> the view model wiring will be performed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.AutoWireViewModelChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Automatically looks up the viewmodel that corresponds to the current view, using two strategies:
+            It first looks to see if there is a mapping registered for that view, if not it will fallback to the convention based approach.
+            </summary>
+            <param name="d">The dependency object, typically a view.</param>
+            <param name="e">The <see cref="T:Windows.UI.Xaml.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.GetViewModelForView(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Gets the view model for the specified view.
+            </summary>
+            <param name="view">The view that the view model wants.</param>
+            <returns>The vie wmodel that corresponds to the view passed as a parameter.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Prism.StoreApps.ViewModelLocator.Register(System.String,System.Func{System.Object})">
+            <summary>
+            Registers the view model factory for the specified view type name.
+            </summary>
+            <param name="viewTypeName">The name of the view type.</param>
+            <param name="factory">The viewmodel factory.</param>
+        </member>
+    </members>
+</doc>

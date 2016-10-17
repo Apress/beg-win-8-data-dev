@@ -1,0 +1,9 @@
+Assets\Logo.png
+Assets\SmallLogo.png
+Assets\SplashScreen.png
+Assets\StoreLogo.png
+App.xaml
+Common\StandardStyles.xaml
+Skins\MainSkin.xaml
+Views\BillView.xaml
+Views\MainPage.xaml

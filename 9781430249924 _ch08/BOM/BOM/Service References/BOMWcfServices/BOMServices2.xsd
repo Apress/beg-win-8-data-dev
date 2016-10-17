@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BOM.Service.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BOM.Service.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:18017/BOMServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Part" nillable="true" type="tns:Part" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPart" nillable="true" type="tns:ArrayOfPart" />
+  <xs:complexType name="Part">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOMParts" nillable="true" type="tns:ArrayOfBillOfMaterial" />
+      <xs:element minOccurs="0" name="PartID" type="xs:int" />
+      <xs:element minOccurs="0" name="PartName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StockCount" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Part" nillable="true" type="tns:Part" />
+  <xs:complexType name="ArrayOfBillOfMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BillOfMaterial" nillable="true" type="tns:BillOfMaterial" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBillOfMaterial" nillable="true" type="tns:ArrayOfBillOfMaterial" />
+  <xs:complexType name="BillOfMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOMComponent" nillable="true" type="tns:Component" />
+      <xs:element minOccurs="0" name="BOMID" type="xs:int" />
+      <xs:element minOccurs="0" name="BOMPart" nillable="true" type="tns:Part" />
+      <xs:element minOccurs="0" name="ComponentID" type="xs:int" />
+      <xs:element minOccurs="0" name="PartID" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="BillOfMaterial" nillable="true" type="tns:BillOfMaterial" />
+  <xs:complexType name="Component">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOMComponents" nillable="true" type="tns:ArrayOfBillOfMaterial" />
+      <xs:element minOccurs="0" name="ComponentID" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentName" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Component" nillable="true" type="tns:Component" />
+  <xs:complexType name="ArrayOfComponent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Component" nillable="true" type="tns:Component" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComponent" nillable="true" type="tns:ArrayOfComponent" />
+</xs:schema>

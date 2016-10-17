@@ -1,0 +1,126 @@
+﻿.manageparty section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .manageparty section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .manageparty section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+resultslist {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        height: 100%;
+        position: relative;
+        width: 100%;
+        z-index: 0;
+    }
+.leftColumn
+    {
+        margin-left: 20px;
+         margin-top: 50px;
+        width: 500px;
+        float:left; /* add this */
+    }
+
+.rightColumn
+    {
+        margin-left: 10px;
+         margin-top: 50px;
+        width: 500px;
+        float:left; /* add this */
+    }
+
+.item{
+ width: 100%;
+ 
+}
+label{
+float: left;
+width: 120px;
+font-weight: bold;
+}
+
+.labelMessage{
+float: left;
+width: 100%;
+font-weight: bold;
+}
+
+input, textarea{
+width: 180px;
+margin-bottom: 15px;
+}
+
+textarea{
+width: 250px;
+height: 150px;
+}
+
+.boxes{
+width: 1em;
+}
+
+#submitbutton{
+margin-left: 120px;
+margin-top: 5px;
+width: 90px;
+}
+
+br{
+clear: left;
+}
+ 
+
+.item-content {
+    width: 200px;
+    margin:10px;
+    border:solid;
+    border-width:1px;
+    border-color:dimgrey;
+}
+
+.item{
+    width: 220px;
+}
+
+.item-title {
+    font-family:'Segoe UI';
+    font-size:larger;
+     margin:3px;
+     
+}
+
+.item-subtitle-guests {
+    font-family:'Segoe UI';
+    font-size:medium;
+     margin:4px;
+     color:darkgray;
+     
+}
+
+.item-subtitle-guests:before {
+    content: 'Guests : ';
+}
+
+.item-subtitle-shoppingitem {
+    font-family:'Segoe UI';
+    font-size:medium;
+     margin:4px;
+     color:darkgray;
+     
+}
+
+.item-subtitle-shoppingitem:before {
+    content: 'Quantity : ';
+}
+ 

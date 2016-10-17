@@ -1,0 +1,26 @@
+D:\SystemDowload\MyCollections\MyCollections\bin\Debug\resources.pri
+D:\SystemDowload\MyCollections\MyCollections\bin\Debug\AppxManifest.xml
+D:\SystemDowload\MyCollections\MyCollections\bin\Debug\MyCollections.build.appxrecipe
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\priconfig.xml.intermediate
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\layout.resfiles.intermediate
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\resources.resfiles.intermediate
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\pri.resfiles.intermediate
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\priconfig.xml
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\layout.resfiles
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\resources.resfiles
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\pri.resfiles
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\LanguageQualifiers.txt
+D:\SystemDowload\MyCollections\MyCollections\bld\Debug\ProjectArchitectures.txt
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bin\Debug\resources.pri
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bin\Debug\AppxManifest.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bin\Debug\MyCollections.build.appxrecipe
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\priconfig.xml.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\layout.resfiles.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\resources.resfiles.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\pri.resfiles.intermediate
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\priconfig.xml
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\layout.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\resources.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\pri.resfiles
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\LanguageQualifiers.txt
+D:\SkyDrive\Book8\Code\9781430249924 _ch04\MyCollections\bld\Debug\ProjectArchitectures.txt

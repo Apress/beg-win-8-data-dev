@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BillReminder.Model.Bill">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAACAQAAAAAASAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Model\Bill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BillReminder.Model.PaidBill">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAgAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Model\PaidBill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BillReminder.Model.Category">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

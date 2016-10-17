@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BOMServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:18017/BOMServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:18017/BOMServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:18017/BOMServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BOM.Service.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBOMServices_GetAllParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllParts" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_GetAllParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_GetAllComponents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllComponents" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_GetAllComponents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddComponent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComponent" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddComponent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_DeleteComponent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComponent" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_DeleteComponent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPart" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_DeletePart_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePart" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_DeletePart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBOM" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_RemoveBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBOM" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_RemoveBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddDummyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDummyData" />
+  </wsdl:message>
+  <wsdl:message name="IBOMServices_AddDummyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDummyDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBOMServices">
+    <wsdl:operation name="GetAllParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/GetAllParts" message="tns:IBOMServices_GetAllParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/GetAllPartsResponse" message="tns:IBOMServices_GetAllParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllComponents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/GetAllComponents" message="tns:IBOMServices_GetAllComponents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/GetAllComponentsResponse" message="tns:IBOMServices_GetAllComponents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComponent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/AddComponent" message="tns:IBOMServices_AddComponent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/AddComponentResponse" message="tns:IBOMServices_AddComponent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComponent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/DeleteComponent" message="tns:IBOMServices_DeleteComponent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/DeleteComponentResponse" message="tns:IBOMServices_DeleteComponent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/AddPart" message="tns:IBOMServices_AddPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/AddPartResponse" message="tns:IBOMServices_AddPart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/DeletePart" message="tns:IBOMServices_DeletePart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/DeletePartResponse" message="tns:IBOMServices_DeletePart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/AddBOM" message="tns:IBOMServices_AddBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/AddBOMResponse" message="tns:IBOMServices_AddBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/RemoveBOM" message="tns:IBOMServices_RemoveBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/RemoveBOMResponse" message="tns:IBOMServices_RemoveBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDummyData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMServices/AddDummyData" message="tns:IBOMServices_AddDummyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMServices/AddDummyDataResponse" message="tns:IBOMServices_AddDummyData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBOMServices" type="tns:IBOMServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllParts">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/GetAllParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllComponents">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/GetAllComponents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComponent">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/AddComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComponent">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/DeleteComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPart">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/AddPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePart">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/DeletePart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBOM">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/AddBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBOM">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/RemoveBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDummyData">
+      <soap:operation soapAction="http://tempuri.org/IBOMServices/AddDummyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BOMServices">
+    <wsdl:port name="BasicHttpBinding_IBOMServices" binding="tns:BasicHttpBinding_IBOMServices">
+      <soap:address location="http://localhost:18017/BOMServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

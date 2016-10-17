@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AviarySDKsWindows8</name>
+    </assembly>
+    <members>
+        <member name="T:AviarySDKsWindows8.AviaryEditorTask">
+            <summary>
+            Class AviaryEditorTask
+            <remarks>To create an instance, use the several Static Methods on this class.</remarks>
+            </summary>
+        </member>
+        <member name="F:AviarySDKsWindows8.AviaryEditorTask.STR_AviaryEditorTaskShowMustBeCalledFromTheUIThread">
+            <summary>
+            The ST r_ aviary editor task show must be called from the UI thread
+            </summary>
+        </member>
+        <member name="F:AviarySDKsWindows8.AviaryEditorTask.STR_CouldNotLaunchAndSetupSDK">
+            <summary>
+            The ST r_ could not launch and setup SDK
+            </summary>
+        </member>
+        <member name="F:AviarySDKsWindows8.AviaryEditorTask.m_originalFrame">
+            <summary>
+            The m_original frame
+            </summary>
+        </member>
+        <member name="F:AviarySDKsWindows8.AviaryEditorTask.m_editorRootFrame">
+            <summary>
+            The m_editor root frame
+            </summary>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.#ctor(Aviary.SDKs.Windows8.Common.Models.AviaryEditorPhoto,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AviarySDKsWindows8.AviaryEditorTask"/> class.
+            </summary>
+            <param name="photo">The photo.</param>
+            <param name="isHiResSupported">if set to <c>true</c> [is hi res supported].</param>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.Show(System.Collections.Generic.IEnumerable{Aviary.SDKs.Windows8.Common.AviaryToolOptions})">
+            <summary>
+            Shows the specified options.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.Show">
+            <summary>
+            Shows this instance.
+            </summary>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.Show(System.Boolean)">
+            <summary>
+            Shows the specified is in share mode.
+            </summary>
+            <param name="isInShareMode">if set to <c>true</c> [is in share mode].</param>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.Show(System.Collections.Generic.IEnumerable{Aviary.SDKs.Windows8.Common.AviaryToolOptions},System.Boolean)">
+            <summary>
+            Shows the specified options.
+            </summary>
+            <param name="options">The options.</param>
+            <param name="isInShareMode">if set to <c>true</c> [is in share mode].</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.RaiseComplete(Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs)">
+            <summary>
+            Raises the complete.
+            </summary>
+            <param name="results">The <see cref="T:Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.CompleteTask(Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs)">
+            <summary>
+            Completes the task.
+            </summary>
+            <param name="results">The <see cref="T:Aviary.SDKs.Windows8.Common.AviaryTaskCompletedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.FromRandomAccessStream(Windows.Storage.Streams.IRandomAccessStream,System.Boolean)">
+            <summary>
+            Froms the random access stream.
+            </summary>
+            <param name="photoFileStream">The photo file stream.</param>
+            <param name="supportHiRes">if set to <c>true</c> [support hi res].</param>
+            <returns>IAsyncOperation{AviaryEditorTask}.</returns>
+            <remarks>Max Hi-Res output 3MP</remarks>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.FromRandomAccessStreamInternal(Windows.Storage.Streams.IRandomAccessStream,System.Boolean,System.Boolean)">
+            <summary>
+            Froms the random access stream internal.
+            </summary>
+            <param name="photoFileStream">The photo file stream.</param>
+            <param name="supportHiRes">if set to <c>true</c> [support hi res].</param>
+            <returns>Task{AviaryEditorTask}.</returns>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.FromWriteableBitmap(Windows.UI.Xaml.Media.Imaging.WriteableBitmap,System.Boolean)">
+            <summary>
+            Creates an instance of AviaryEdtiorTask from a writeable bitmap.
+            </summary>
+            <param name="bitmap">The bitmap.</param>
+            <param name="supportHiRes">if set to <c>true</c> [support hi res].</param>
+            <returns>AviaryEditorTask.</returns>
+            <remarks>Max Hi-Res output 3MP</remarks>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.FromBytes(System.Byte[],System.Boolean)">
+            <summary>
+            Froms the bytes.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="supportHiRes">if set to <c>true</c> [support hi res].</param>
+            <returns>IAsyncOperation{AviaryEditorTask}.</returns>
+        </member>
+        <member name="M:AviarySDKsWindows8.AviaryEditorTask.SetAviaryEditorAccentColor(Windows.UI.Color,System.Boolean)">
+            <summary>
+            Sets the color of the aviary editor accent.
+            </summary>
+            <param name="accentColor">Color of the accent.</param>
+            <param name="useWhiteTheme">if set to <c>true</c> [use white theme].</param>
+            <remarks>The editor color can only be set once. This must be called the any calls to create an instance on AviaryEditorTask
+            using one of the static methods.
+            </remarks>
+        </member>
+        <member name="P:AviarySDKsWindows8.AviaryEditorTask.Options">
+            <summary>
+            Gets the options.
+            </summary>
+            <value>The options.</value>
+        </member>
+        <member name="P:AviarySDKsWindows8.AviaryEditorTask.Photo">
+            <summary>
+            Gets the photo.
+            </summary>
+            <value>The photo.</value>
+        </member>
+        <member name="P:AviarySDKsWindows8.AviaryEditorTask.IsHiResEnabled">
+            <summary>
+            Gets a value indicating whether this instance is hi res enabled.
+            </summary>
+            <value><c>true</c> if this instance is hi res enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:AviarySDKsWindows8.AviaryEditorTask.WasLaunchedIsShareMode">
+            <summary>
+            Gets a value indicating whether [was launched is share mode].
+            </summary>
+            <value><c>true</c> if [was launched is share mode]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:AviarySDKsWindows8.AviaryEditorTask.Completed">
+            <summary>
+            Occurs when [completed].
+            </summary>
+        </member>
+        <member name="P:AviarySDKsWindows8.AviaryEditorTask.AllToolOptions">
+            <summary>
+            Gets all tool options.
+            </summary>
+            <value>All tool options.</value>
+            <remarks>This represents all available tools in the Aviary Photo Editing SDK. You may reorder or remove tools as necessary.</remarks>
+        </member>
+        <member name="T:AviarySDKsWindows8.UI.Views.AviaryEditor">
+            <summary>
+            An empty page that can be used on its own or navigated to within a Frame.
+            </summary>
+        </member>
+        <member name="M:AviarySDKsWindows8.UI.Views.AviaryEditor.OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.  The Parameter
+            property is typically used to configure the page.</param>
+        </member>
+    </members>
+</doc>

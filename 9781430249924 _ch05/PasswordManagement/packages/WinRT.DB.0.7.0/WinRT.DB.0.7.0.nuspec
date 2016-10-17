@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>WinRT.DB</id>
+    <version>0.7.0</version>
+    <title>WinRT File Based Database</title>
+    <authors>Sergey Barskiy</authors>
+    <owners>Sergey Barskiy</owners>
+    <licenseUrl>http://winrtdatabase.codeplex.com/license</licenseUrl>
+    <projectUrl>http://winrtdatabase.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This database is based on a file system in Windows 8 and is using WinRT (Windows Runtime) in Windows 8 environment and thus can be used for Metro style applications.  It includes simple, yet effective API that allows you to create tables based on classes.  Each database consists of any number of tables.  All operations are asynchronous to support Metro style operations on file system.  It also supports horizontal partitioning of tables to provide for smaller files and faster operations.  The usage of this software is very simple. You create a new database by calling CreateDatabase. You can add tables to the database by calling db.CreateTable&lt;T&gt; where T is the type of entity to be stored in table rows.  You can save either all tables by calling SaveAsync on database or one table at a time by calling SaveAsync on a specific table.  It supports await and async keywords.  As of version 0.9.1.0 it supports data binding to list based controls, such as ListBox.
+As of version 0.5 IsBusy property is added that can be used to maintain the state of Save button.  Please see QuickStart project that is part of the download for sample implementation of Save button and use of Busy status.  You can now store database in local or roaming folder.</description>
+    <summary>This database is based on a file system in Windows 8 and is using WinRT (Windows Runtime) in Windows 8 environment and thus can be used for Metro style applications.</summary>
+    <releaseNotes>Initial release based on beta verion of the VS 11 and Windows 8 Consumer Preview</releaseNotes>
+  </metadata>
+</package>
